@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>#コンパス DECKMAKER</title>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "#コンパス DECKMAKER",
+            "url": "https://cps.mfmii.work/deckmaker/"
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/DFSoGeiStd-W7.css?h=74ea94b8983ce7fe623955d6dbe3504e">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="assets/css/header.css?h=3e6a7a79764000a55a7a2dc04d761609">
+    <link rel="stylesheet" href="assets/css/styles.css?h=3994cf5e6a9bc82ff8c98a83596960ef">
+    <link rel="stylesheet" href="assets/css/switch.css?h=40260550b815ff23f3623287a3efaff8">
+</head>
+
+<body style="height: 100vh;">
+    <!-- Start: LoadingScreen -->
+    <div id="loadingScreen" class="hide">
+        <div class="text-center" id="loadingScreenContent"><img src="assets/img/logo.svg?h=bca7856e10d7b0a89a8b1f3c040bbbca">
+            <div class="progress">
+                <div class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span class="visually-hidden">0%</span></div>
+            </div><span class="status">Loading...</span>
+        </div><!-- Start: Debug -->
+        <div><button class="btn btn-secondary" type="button" onclick="new CpsDM().LoadingScreen.HideLoadingScreen();">Debug[HideLoadingScreen]</button><button class="btn btn-secondary" type="button" onclick="const DM = new CpsDM();">Debug[HideLoadingScreen]</button></div><!-- End: Debug -->
+    </div><!-- End: LoadingScreen -->
+    <header>
+        <!-- Start: NavBar -->
+        <nav class="navbar navbar-expand-md py-3 navbar-light">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><img src="http://cdn.cpsdm.nginx.local/img/logo.svg" style="height: 75px;"></a>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#" style="margin: 0 30px;">デッキ編成</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">ヒーローシュミレーション</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">ミニゲーム</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">情報修正</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">その他</a></li>
+                    </ul>
+                </div>
+                <div style="font-family: DFSoGeiStd-W7;"><span class="fs-2 d-block d-xxl-flex align-items-xxl-center">#コンパス DeckMakaer</span>
+                    <div><span>Created by mf_Mii</span><span class="float-end">応援コード: C-JesK</span></div>
+                </div><button data-bs-target="#navcol-1" data-bs-toggle="collapse" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            </div>
+        </nav><!-- End: NavBar -->
+    </header>
+    <main class="d-flex d-xxl-flex justify-content-start justify-content-xxl-start">
+        <div id="leftmenu">
+            <div id="leftmenuHeader">
+                <h4 class="d-inline">保存済みデッキ</h4><i class="fas fa-cog fs-3 text-black-50 float-end iconBtn" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="LeftDecksEditModeOnBtn__" title="デッキリストを編集"></i><i class="fas fa-times fs-3 text-black-50 float-end iconBtn hide" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="LeftDecksEditModeOffBtn__" title="デッキリスト編集を終了"></i>
+            </div><!-- Start: line -->
+            <div class="x-line"></div><!-- End: line -->
+            <div id="deckList">
+                <!-- Start: デッキ一覧 -->
+                <ul class="list-group">
+                    <!-- Start: デッキ -->
+                    <li class="list-group-item deckList-item active">
+                        <!-- Start: 中身 -->
+                        <div class="deckList-itemContent"><img id="deckList-itemIcon" src="assets/img/kokuriko_radius.png?h=b8b69354ec275969b8cb9bb3d28a307a"><!-- Start: 名前入力 --><input type="text" class="deckList-nameInput"><!-- End: 名前入力 -->
+                            <!-- Start: 名前確定 --><button class="btn deckList-nameEnter" type="submit"><i class="fas fa-check"></i></button><!-- End: 名前確定 -->
+                            <!-- Start: 操作ボタン -->
+                            <div class="deckList-buttons"><i class="far fa-trash-alt float-end deckList-deleteBtn deckList-button"></i><i class="fas fa-pen float-end deckList-editBtn deckList-button"></i></div><!-- End: 操作ボタン --><span class="deckList-name">デッキ1</span>
+                        </div><!-- End: 中身 -->
+                        <!-- Start: 選択アニメーション -->
+                        <div class="deckList-activeAnimation"><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span></div><!-- End: 選択アニメーション -->
+                    </li><!-- End: デッキ -->
+                </ul><!-- End: デッキ一覧 -->
+            </div>
+            <div class="fs-5 text-center" id="addDeck" style="padding: 5px 0;"><span>追加</span><i class="fas fa-plus"></i></div>
+        </div>
+        <div id="mainWindow">
+            <div class="d-flex d-xxl-flex justify-content-between align-items-end" id="cardList_Header">
+                <h2>カード一覧</h2>
+                <div id="cardList_Header_SearchForm"><button class="btn btn-primary" id="cardList_Header_SF_filterBtn" type="button"><i class="fas fa-filter"></i>フィルター</button><input type="search" id="cardList_Header_SF_searchBox" placeholder="カードを検索(略称可)"><!-- Start: switch -->
+                    <div id="cardList_Header_SF_detailSwitch" class="form-check form-switch">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="CardList_ShowDetail_Switch" name="CardList_ShowDetail_Switch"><label class="form-check-label" for="CardList_ShowDetail_Switch">詳細表示</label></div>
+                    </div><!-- End: switch -->
+                </div>
+            </div><!-- Start: Line -->
+            <div class="x-line"></div><!-- End: Line -->
+            <div id="cardList_Main">
+                <!-- Start: RankContainer -->
+                <div class="cpsdm-cardList-rankContainer">
+                    <!-- Start: RankContainerHead -->
+                    <div class="cpsdm-cardList-rankContainer-head">
+                        <h4>Fランクより入手可能</h4><button class="btn btn-primary cpsdm-cardList-rankContainer-toggleBtn" type="button" data-bs-toggle="collapse" data-bs-target="#rankContainer_Content_F_Container" aria-expanded="false" aria-controls="rankContainer_Content_F_Container"><i class="fas fa-caret-down fs-3 iconBtn"></i></button>
+                    </div><!-- End: RankContainerHead -->
+                    <div id="rankContainer_Content_F_Container" class="collapse collapsed show">
+                        <div id="rankContainer_Content_F" class="cpsdm-cardList-rankContainer-content">
+                            <ul class="list-group cpsdm-cardList-container-list">
+                                <li class="list-group-item cpsdm-cardList-container-list-item" style="background-image: url(http://cdn.cpsdm.nginx.local/img/card/normal/1.webp);">
+                                    <div class="cpsdm-cardList-cardDetail" data-cpsdm-cardid="001"><span class="cpsdm-cardList-cardDetail-name">祭りのお供！ 手持ち花火</span>
+                                        <div class="cpsdm-cardList-cardDetail-status"><span class="cpsdm-cardList-cardDetail-status-atk">&nbsp; 55</span><span class="cpsdm-cardList-cardDetail-status-def">&nbsp; 18</span><span class="cpsdm-cardList-cardDetail-status-phy">363</span></div>
+                                        <div class="cpsdm-cardList-cardDetail-info"><span>CT:&nbsp;</span><span>18秒</span><!-- Start: Padding --><span class="pad"></span><!-- End: Padding --><span>発動:&nbsp;</span><span>無</span></div>
+                                        <div class="cpsdm-cardList-cardDetail-buttonBox"><button class="btn btn-primary cpsdm-cardList-cardDetail-button" type="button"><span>詳細</span><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-1 iconBtn">
+                                                    <g>
+                                                        <path d="M0,0h24v24H0V0z" fill="none"></path>
+                                                        <path d="M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"></path>
+                                                    </g>
+                                                </svg></button><button class="btn btn-primary cpsdm-cardList-cardDetail-button" type="button"><span>使用</span><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-1 iconBtn">
+                                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"></path>
+                                                </svg></button></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- End: RankContainer -->
+            </div>
+        </div>
+        <div id="rightwindow">
+            <div id="deckBox">
+                <div id="deckBox-Title">
+                    <h2>DECK</h2><button class="btn btn-danger" type="button">フリバモード</button>
+                </div>
+                <div id="deckBox-Cards">
+                    <ul>
+                        <li class="deckBox-card"><img src="http://cdn.cpsdm.nginx.local/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <!-- Start: LevelInput -->
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div><!-- End: LevelInput -->
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-card"><img src="http://cdn.cpsdm.nginx.local/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <!-- Start: LevelInput -->
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div><!-- End: LevelInput -->
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-card"><img src="http://cdn.cpsdm.nginx.local/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <!-- Start: LevelInput -->
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div><!-- End: LevelInput -->
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-card"><img src="http://cdn.cpsdm.nginx.local/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <!-- Start: LevelInput -->
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div><!-- End: LevelInput -->
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="deckBox-TotalStatus">
+                    <h5>デッキ総合戦力</h5>
+                    <ul>
+                        <li class="deckBox-TotalStatus-status" data-cpsdm-totalstatus="atk"><span>攻撃</span>
+                            <div class="deckBox-TotalStatus-status-barBox">
+                                <div class="deckBox-TotalStatus-status-barBox-text"><span class="deckBox-TotalStatus-status-barBox-text-normal">99999</span></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-plus"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-minus"></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-TotalStatus-status" data-cpsdm-totalstatus="def"><span>防御</span>
+                            <div class="deckBox-TotalStatus-status-barBox">
+                                <div class="deckBox-TotalStatus-status-barBox-text"><span class="deckBox-TotalStatus-status-barBox-text-normal">99999</span></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-plus"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-minus"></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-TotalStatus-status" data-cpsdm-totalstatus="phy"><span>体力</span>
+                            <div class="deckBox-TotalStatus-status-barBox">
+                                <div class="deckBox-TotalStatus-status-barBox-text"><span class="deckBox-TotalStatus-status-barBox-text-normal">99999</span></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-plus"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-minus"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div id="deckBox-TotalStatus-HeroCalc">
+                        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="DeckBox-TotalStatus-HeroCalcSwitch" name=""><label class="form-check-label" for="DeckBox-TotalStatus-HeroCalcSwitch">ヒーロー倍率補正計算</label></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bs-init.js?h=f85385df9bc7fca4241bc1dbf53b9d61"></script>
+    <script src="assets/js/cpsdm.js?h=1c6a2f1c8972bbe62254f686790ad9b8"></script>
+    <script src="http://script.cpsdm.nginx.local/bundle.js" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" type="module"></script>
+    <script src="assets/js/page.js?h=35975ba3e1d271e2d1d7e609bde4bb3e"></script>
+    <script src="assets/js/utils.js?h=86f4261d35b7be9f85e8a9373ce770e7"></script>
+</body>
+
+</html>

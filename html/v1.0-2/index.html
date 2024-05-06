@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>#コンパス DECKMAKER</title>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "#コンパス DECKMAKER",
+            "url": "https://cps.mfmii.work/deckmaker/"
+        }
+    </script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/DFSoGeiStd-W7.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/card_info.compiled.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/rightmenu_heroinfo.compiled.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+</head>
+
+<body style="height: 100vh;">
+    <div id="ModalsContainer">
+        <div class="modal fade cpsdm-modal-custom-animation" role="dialog" tabindex="-1" id="modal-Hero" data-bs-theme="dark" data-modal-animation="1">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content"><button class="btn-close btn-close-white" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    <div class="hero-info-title">
+                        <h1>メグメグ</h1>
+                        <h5>通称: メグ, 姫</h5>
+                    </div>
+                    <div class="hero-info-container">
+                        <div class="hero-info-container-left"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/fullbody/o19.png">
+                            <div class="infoBox"><span>ILLUST: ぽあろ</span><span>CV: 天野 心愛&amp;中尾 隆聖</span><span>Motion: 217</span><span>Music:&nbsp;<a class="herosong-link" href="#">バイオレンストリガー</a>&nbsp;(八王子P)</span></div>
+                            <p class="description">おませで危険な兵器マニアの少女<br>愛用の「ガトりん」で嗜虐の限りを尽くす</p>
+                            <div class="official_introduction">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>メグメグの特徴</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;目にもとまらぬ速さで撃ちまくるガンナーです。1発の威力は低く、防御力が高い敵は苦手です。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>攻撃的なヒーローアクションとアビリティで、積極的に戦いたい人に向いていますよ。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ヒーロースキルは、射程が無限の設置型ガトリングです。1試合に複数置くことも可能ですよ。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="hero-info-container-right">
+                            <ul class="heroInfoContainer-StatusBox">
+                                <li class="heroStatus-status" data-cpsdm-herostatus="atk"><span>攻撃</span>
+                                    <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                        <div class="heroStatus-BarBox-val"></div>
+                                    </div>
+                                </li>
+                                <li class="heroStatus-status" data-cpsdm-herostatus="def"><span>防御</span>
+                                    <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                        <div class="heroStatus-BarBox-val"></div>
+                                    </div>
+                                </li>
+                                <li class="heroStatus-status" data-cpsdm-herostatus="phy"><span>体力</span>
+                                    <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                        <div class="heroStatus-BarBox-val"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="heroInfoContainer-moreStatusBox">
+                                <div class="status" data-cpsdm-herostatus="len"><span class="status_lbl">射程:</span></div>
+                                <div class="status" data-cpsdm-herostatus="spd"><span class="status_lbl">移動速度:</span></div>
+                            </div>
+                            <div class="heroInfoContainer-moreStatusBox">
+                                <div class="status status_atkspd" data-cpsdm-herostatus="atkSpd"><span class="status_lbl">通常攻撃速度:</span>
+                                    <div class="atkspd_res"><span class="atkspd_val">00.00秒</span><span class="atkspd_afterVal">(硬直00.00秒)</span><span>/</span></div>
+                                    <div class="atkspd_input"><input class="form-control-sm atkspd_num" type="number" min="1" value="1"><span class="atkspd_unit">段目</span></div>
+                                </div>
+                            </div>
+                            <div class="hero_features">
+                                <div class="hero_feature">
+                                    <div class="title"><span class="head">ﾋｰﾛｰｽｷﾙ</span><span class="content">がとりんMKⅡ せっち</span></div>
+                                    <p class="description"><span class="main">設置型ガトリングで敵を自動攻撃(最大2機まで)</span><br>タメ時間: 約9秒&nbsp; |&nbsp; 無敵時間: 約2.9秒(初回のみ約7.0秒)<br>射程: 無限 | 攻撃倍率: 約×0.88&nbsp; |&nbsp; 設置時間: 36秒</p>
+                                </div>
+                                <div class="hero_feature">
+                                    <div class="title"><span class="head">ｱｸｼｮﾝ</span><span class="content">回転式機関銃攻撃／ばっちーのショードク</span></div>
+                                    <p class="description">設置型ガトリングで敵を自動攻撃(最大2機まで)</p>
+                                </div>
+                                <div class="hero_feature">
+                                    <div class="title"><span class="head">ｱﾋﾞﾘﾃｨ</span><span class="content">デンジャラス ハイテンション</span></div>
+                                    <p class="description">敵にダメージを与えるたびにHSゲージ回復<br>(1ﾀﾞﾒ=1/80, 2ﾀﾞﾒ以上=1/40)</p>
+                                </div>
+                            </div>
+                            <div class="nockbacks">
+                                <div class="nockback"><span class="title">プッシュ量(水平)</span><img class="val" src="http://cpsdm-assets.local.mfmii.work/img/icons/nb_rep_s.png"></div>
+                                <div class="nockback"><span class="title">ランチ量(放物線)</span><img class="val" src="http://cpsdm-assets.local.mfmii.work/img/icons/nb_rep_s.png"></div>
+                                <div class="nockback"><span class="title">ブラスト量(垂直)</span><img class="val" src="http://cpsdm-assets.local.mfmii.work/img/icons/nb_rep_s.png"></div>
+                            </div>
+                            <div class="card-times"><span class="title">カード発動時間</span>
+                                <div class="time1_container">
+                                    <div class="time1_item"><span class="label">無</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                    <div class="time1_item"><span class="label">短</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                    <div class="time1_item"><span class="label">長</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                </div>
+                                <div class="time2_container">
+                                    <div class="time2_group">
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div>
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="time2_group">
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div>
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="time2_group">
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade cpsdm-modal-custom-animation" role="dialog" tabindex="-1" id="modal-HeroSelect" data-modal-animation="3">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">ヒーローを選択</h4><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="list-group hero-select-list">
+                            <li class="list-group-item hero-select-list-item"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/icon/o01.png"><span>十文字アタリ</span></li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">Close</button><button class="btn btn-primary" type="button">Save</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loadingScreen" class="hide">
+        <div class="text-center" id="loadingScreenContent"><img src="assets/img/logo.svg">
+            <div class="progress">
+                <div class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span class="visually-hidden">0%</span></div>
+            </div><span class="status">Loading...</span>
+        </div>
+        <div><button class="btn btn-secondary" type="button" onclick="new CpsDM().LoadingScreen.HideLoadingScreen();">Debug[HideLoadingScreen]</button><button class="btn btn-secondary" type="button" onclick="const DM = new CpsDM();">Debug[HideLoadingScreen]</button></div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-md py-3 navbar-light">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><img src="http://cpsdm-assets.local.mfmii.work/img/logo.svg" style="height: 75px;"></a>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#" style="margin: 0 30px;">デッキ編成</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">ヒーローシュミレーション</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">ミニゲーム</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">情報修正</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">その他</a></li>
+                    </ul>
+                </div>
+                <div style="font-family: DFSoGeiStd-W7;"><span class="fs-2 d-block d-xxl-flex align-items-xxl-center">#コンパス DeckMakaer</span>
+                    <div><span>Created by mf_Mii</span><span class="float-end">応援コード: C-JesK</span></div>
+                </div><button data-bs-target="#navcol-1" data-bs-toggle="collapse" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            </div>
+        </nav>
+    </header>
+    <main class="d-flex d-xxl-flex justify-content-start justify-content-xxl-start">
+        <div id="leftmenu">
+            <div id="leftmenuHeader">
+                <h4 class="d-inline">保存済みデッキ</h4><i class="fas fa-cog fs-3 text-black-50 float-end iconBtn" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="LeftDecksEditModeOnBtn__" title="デッキリストを編集"></i><i class="fas fa-times fs-3 text-black-50 float-end iconBtn hide" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="LeftDecksEditModeOffBtn__" title="デッキリスト編集を終了"></i>
+            </div>
+            <div class="x-line"></div>
+            <div id="deckList">
+                <ul class="list-group">
+                    <li class="list-group-item deckList-item active">
+                        <div class="deckList-itemContent"><img id="deckList-itemIcon" src="kokuriko_radius.png"><input type="text" class="deckList-nameInput"><button class="btn deckList-nameEnter" type="submit"><i class="fas fa-check"></i></button>
+                            <div class="deckList-buttons"><i class="far fa-trash-alt float-end deckList-deleteBtn deckList-button"></i><i class="fas fa-pen float-end deckList-editBtn deckList-button"></i></div><span class="deckList-name">デッキ1</span>
+                        </div>
+                        <div class="deckList-activeAnimation"><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="fs-5 text-center" id="addDeck" style="padding: 5px 0;"><span>追加</span><i class="fas fa-plus"></i></div>
+        </div>
+        <div id="mainWindow">
+            <div class="d-flex d-xxl-flex justify-content-between align-items-end" id="cardList_Header">
+                <h2>カード一覧</h2>
+                <div id="cardList_Header_SearchForm"><button class="btn btn-primary" id="cardList_Header_SF_filterBtn" type="button"><i class="fas fa-filter"></i>フィルター</button><input type="search" id="cardList_Header_SF_searchBox" placeholder="カードを検索(略称可)">
+                    <div id="cardList_Header_SF_detailSwitch" class="form-check form-switch">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="CardList_ShowDetail_Switch" name="CardList_ShowDetail_Switch"><label class="form-check-label" for="CardList_ShowDetail_Switch">詳細表示</label></div>
+                    </div>
+                </div>
+            </div>
+            <div class="x-line"></div>
+            <div id="cardList_Main">
+                <div class="cpsdm-cardList-rankContainer">
+                    <div class="cpsdm-cardList-rankContainer-head">
+                        <h4>Fランクより入手可能</h4><button class="btn btn-primary cpsdm-cardList-rankContainer-toggleBtn" type="button" data-bs-toggle="collapse" data-bs-target="#rankContainer_Content_F_Container" aria-expanded="false" aria-controls="rankContainer_Content_F_Container"><i class="fas fa-caret-down fs-3 iconBtn"></i></button>
+                    </div>
+                    <div id="rankContainer_Content_F_Container" class="collapse collapsed show">
+                        <div id="rankContainer_Content_F" class="cpsdm-cardList-rankContainer-content">
+                            <ul class="list-group cpsdm-cardList-container-list">
+                                <li class="list-group-item cpsdm-cardList-container-list-item" style="background-image: url('http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp');">
+                                    <div class="cpsdm-cardList-cardDetail" data-cpsdm-cardid="001"><span class="cpsdm-cardList-cardDetail-name">祭りのお供！ 手持ち花火</span>
+                                        <div class="cpsdm-cardList-cardDetail-status"><span class="cpsdm-cardList-cardDetail-status-atk">&nbsp; 55</span><span class="cpsdm-cardList-cardDetail-status-def">&nbsp; 18</span><span class="cpsdm-cardList-cardDetail-status-phy">363</span></div>
+                                        <div class="cpsdm-cardList-cardDetail-info"><span>CT:&nbsp;</span><span>18秒</span><span class="pad"></span><span>発動:&nbsp;</span><span>無</span></div>
+                                        <div class="cpsdm-cardList-cardDetail-buttonBox"><button class="btn btn-primary cpsdm-cardList-cardDetail-button" type="button"><span>詳細</span><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-1 iconBtn">
+                                                    <g>
+                                                        <path d="M0,0h24v24H0V0z" fill="none"></path>
+                                                        <path d="M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"></path>
+                                                    </g>
+                                                </svg></button><button class="btn btn-primary cpsdm-cardList-cardDetail-button" type="button"><span>使用</span><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-1 iconBtn">
+                                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"></path>
+                                                </svg></button></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cardInfo"><span class="title">【ダンまち】眷属の物語（ファミリア・ミィス）</span>
+                <div class="card-info"><img class="card-img" src="http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp">
+                    <div class="card-data">
+                        <div class="desc"><span class="head">効果</span><span class="content">効果の説明 効果の説明 効果の説明 効果の説明 効果の説明 効果の説明 効果の説明</span></div>
+                        <div><span class="head">CT</span><span class="content">29秒</span></div>
+                        <div><span class="head">発動</span><span class="content">29秒</span></div>
+                        <div><span class="head">射程</span><span class="content">前1.5ﾏｽ 横1.5ﾏｽ</span></div>
+                        <div><span class="head">倍率</span><span class="content">1000%</span></div>
+                        <ul class="statusBox">
+                            <li class="cardStatus-status" data-cpsdm-cardstatus="atk"><span>攻撃</span>
+                                <div class="cardStatus-BarBox"><span class="cardStatus-BarBox-text">123</span>
+                                    <div class="cardStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                            <li class="cardStatus-status" data-cpsdm-cardstatus="def"><span>防御</span>
+                                <div class="cardStatus-BarBox"><span class="cardStatus-BarBox-text">123</span>
+                                    <div class="cardStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                            <li class="cardStatus-status" data-cpsdm-cardstatus="phy"><span>体力</span>
+                                <div class="cardStatus-BarBox"><span class="cardStatus-BarBox-text">1234</span>
+                                    <div class="cardStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="rightwindow">
+            <div id="deckBox">
+                <div id="deckBox-Title">
+                    <h2>DECK</h2><button class="btn btn-danger" type="button">フリバモード</button>
+                </div>
+                <div id="deckBox-Cards">
+                    <ul>
+                        <li class="deckBox-card"><img src="http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div>
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-card"><img src="http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div>
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-card"><img src="http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div>
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-card"><img src="http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div>
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="deckBox-TotalStatus">
+                    <h5>デッキ総合戦力</h5>
+                    <ul>
+                        <li class="deckBox-TotalStatus-status" data-cpsdm-totalstatus="atk"><span>攻撃</span>
+                            <div class="deckBox-TotalStatus-status-barBox">
+                                <div class="deckBox-TotalStatus-status-barBox-text"><span class="deckBox-TotalStatus-status-barBox-text-normal">99999</span></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-plus"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-minus"></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-TotalStatus-status" data-cpsdm-totalstatus="def"><span>防御</span>
+                            <div class="deckBox-TotalStatus-status-barBox">
+                                <div class="deckBox-TotalStatus-status-barBox-text"><span class="deckBox-TotalStatus-status-barBox-text-normal">99999</span></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-plus"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-minus"></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-TotalStatus-status" data-cpsdm-totalstatus="phy"><span>体力</span>
+                            <div class="deckBox-TotalStatus-status-barBox">
+                                <div class="deckBox-TotalStatus-status-barBox-text"><span class="deckBox-TotalStatus-status-barBox-text-normal">99999</span></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-plus"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-minus"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div id="deckBox-TotalStatus-HeroCalc">
+                        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="DeckBox-TotalStatus-HeroCalcSwitch" name=""><label class="form-check-label" for="DeckBox-TotalStatus-HeroCalcSwitch">ヒーロー倍率補正計算</label></div>
+                    </div>
+                </div>
+            </div>
+            <div id="heroInfo">
+                <div id="heroInfo-Title">
+                    <h2>HERO</h2>
+                </div>
+                <div id="heroInfo-content">
+                    <div id="heroInfo-cont-summary"><button class="hero-selectable-btn" type="button" data-bs-target="#modal-HeroSelect" data-bs-toggle="modal"><img><span class="heroChange">▲タップして変更</span></button><span class="heroNick">メグメグ</span></div>
+                    <div id="heroInfo-cont-detail">
+                        <ul id="heroInfo-cont-statusBox">
+                            <li class="heroStatus-status" data-cpsdm-herostatus="atk"><span>攻撃</span>
+                                <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                    <div class="heroStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                            <li class="heroStatus-status" data-cpsdm-herostatus="def"><span>防御</span>
+                                <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                    <div class="heroStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                            <li class="heroStatus-status" data-cpsdm-herostatus="phy"><span>体力</span>
+                                <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                    <div class="heroStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div id="heroInfo-cont-detailStatus">
+                            <div class="heroDetailStatus" data-cpsdm-herostatus="len"><span>射程|</span><span>4ﾏｽ</span></div>
+                            <div class="heroDetailStatus" data-cpsdm-herostatus="spd"><span>速度|</span><span>4ﾏｽ/s</span></div>
+                        </div>
+                        <div id="heroInfo-cont-buttons">
+                            <ul class="list-unstyled" id="heroInfo-Medals">
+                                <li>
+                                    <div><img class="medal_base" src="assets/img/MedalBase01.png"><img class="medal_icon" src="assets/img/MedalIcon001.png"></div>
+                                </li>
+                                <li>
+                                    <div><img class="medal_base" src="assets/img/MedalBase01.png"><img class="medal_icon" src="assets/img/MedalIcon001.png"></div>
+                                </li>
+                                <li>
+                                    <div><img class="medal_base" src="assets/img/MedalBase01.png"><img class="medal_icon" src="assets/img/MedalIcon001.png"></div>
+                                </li>
+                            </ul>
+                            <div id="heroInfo-MedalEnableBtnContainer" btn-stat-enable="0"><span class="btn-label">メダル適応</span>
+                                <div><span class="status-text">OFF</span><button class="change-btn" type="button">変更</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="heroInfo-more">
+                    <div class="page-change-sends"></div>
+                    <div class="page-change-buttons"><button class="selected" type="button"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-4">
+                                <g>
+                                    <path d="M0,0h24v24H0V0z" fill="none"></path>
+                                    <path d="M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"></path>
+                                </g>
+                            </svg></button><button type="button"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-4">
+                                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                <path d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"></path>
+                            </svg></button><button type="button"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-4">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M19.99 4c0-1.1-.89-2-1.99-2h-8L4 8v12c0 1.1.9 2 2 2h12.01c1.1 0 1.99-.9 1.99-2l-.01-16zM9 19H7v-2h2v2zm8 0h-2v-2h2v2zm-8-4H7v-4h2v4zm4 4h-2v-4h2v4zm0-6h-2v-2h2v2zm4 2h-2v-4h2v4z"></path>
+                            </svg></button></div>
+                    <div class="page-container" page-index="0">
+                        <div class="page hero-info">
+                            <div class="infoBox"><span>ILLUST: ぽあろ</span><span>CV: 天野 心愛&amp;中尾 隆聖</span><span>Motion: 217</span><span>Music:&nbsp;<a class="herosong-link" href="#">バイオレンストリガー</a>&nbsp;(八王子P)</span><button class="btn btn-secondary" id="heroInfo-openModal" type="button" data-bs-target="#modal-Hero" data-bs-toggle="modal">詳細<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                        <g>
+                                            <path d="M0,0h24v24H0V0z" fill="none"></path>
+                                            <path d="M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"></path>
+                                        </g>
+                                    </svg></button></div>
+                            <ul class="status-selector">
+                                <li class="selected">
+                                    <div class="status-selector-item"><span class="title">通常</span></div>
+                                </li>
+                                <li>
+                                    <div class="status-selector-item"><span class="title">HS</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="page hero-features">
+                            <div class="hero_feature">
+                                <div class="title"><span class="head">ﾋｰﾛｰｽｷﾙ</span><span class="content">がとりんMKⅡ せっち</span></div>
+                                <p class="description"><span class="main">設置型ガトリングで敵を自動攻撃(最大2機まで)</span><br>タメ時間: 約9秒&nbsp; |&nbsp; 無敵時間: 約2.9秒(初回のみ約7.0秒)<br>射程: 無限 | 攻撃倍率: 約×0.88&nbsp; |&nbsp; 設置時間: 36秒</p>
+                            </div>
+                            <div class="hero_feature">
+                                <div class="title"><span class="head">ｱｸｼｮﾝ</span><span class="content">回転式機関銃攻撃／ばっちーのショードク</span></div>
+                                <p class="description">設置型ガトリングで敵を自動攻撃(最大2機まで)</p>
+                            </div>
+                            <div class="hero_feature">
+                                <div class="title"><span class="head">ｱﾋﾞﾘﾃｨ</span><span class="content">デンジャラス ハイテンション</span></div>
+                                <p class="description">敵にダメージを与えるたびにHSゲージ回復<br>(1ﾀﾞﾒ=1/80, 2ﾀﾞﾒ以上=1/40)</p>
+                            </div>
+                        </div>
+                        <div class="page card-data">
+                            <div class="card-times"><span class="title">カード発動時間</span>
+                                <div class="time1_container">
+                                    <div class="time1_item"><span class="label">無</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                    <div class="time1_item"><span class="label">短</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                    <div class="time1_item"><span class="label">長</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                </div>
+                                <div class="time2_container">
+                                    <div class="time2_group">
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div>
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="time2_group">
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div>
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="time2_group">
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/cpsdm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" type="module"></script>
+    <script src="assets/js/page.js"></script>
+    <script src="assets/js/utils.js"></script>
+</body>
+
+</html>

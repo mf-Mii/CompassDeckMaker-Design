@@ -1,0 +1,675 @@
+.navbar > .container, .navbar > .container-fluid, .navbar > .container-lg, .navbar > .container-md, .navbar > .container-sm, .navbar > .container-xl, .navbar > .container-xxl {
+  display: flex;
+  flex-wrap: inherit;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  max-width: none;
+}
+
+:root {
+  --cps-theme: #FC8811;
+  --cpsdm-cardDetail-stat-size: 14px;
+}
+
+.x-line {
+  border-bottom: 1px solid #444;
+}
+
+#addDeck {
+  background: var(--cps-theme);
+  color: white;
+  user-select: none;
+  cursor: pointer;
+}
+
+.deckList-item.active {
+  background: repeating-linear-gradient(-45deg, #fff, #fff 4px, #ccc 0, #ccc 6px);
+  color: black;
+  border: none;
+  border-radius: 0;
+  border-left: 5px solid var(--cps-theme);
+  overflow: hidden;
+}
+
+.deckList-buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  display: none;
+}
+
+div.deckList-itemContent {
+  height: 30px;
+  line-height: 30px;
+  user-select: none;
+}
+
+.deckList-button {
+  margin: 0 5px;
+  color: #444;
+  height: 20px;
+  width: 20px;
+  cursor: pointer;
+}
+
+#deckList {
+  height: calc(100% - 101px);
+  user-select: none;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+
+.deckList-nameInput {
+  border: none;
+  border-bottom: 1px solid #333;
+  display: none;
+  background: none;
+  outline: none;
+  vertical-align: top;
+  line-height: 30px;
+  height: 28px;
+}
+
+.deckList-nameEnter {
+  padding: 0;
+  position: relative;
+  bottom: 8px;
+}
+
+.editing .deckList-nameInput {
+  display: inline!important;
+  width: calc(100% - 68px)!important;
+}
+
+.deckList-nameEnter {
+  color: #555;
+  display: none;
+}
+
+.editing .deckList-nameEnter {
+  display: initial!important;
+}
+
+.deckList-item.editing .deckList-buttons, .deckList-item.editing .deckList-name {
+  display: none!important;
+}
+
+.deckList-nameEnter {
+  border: none;
+}
+
+#deckList.editMode .deckList-item .deckList-buttons {
+  display: inline-block;
+}
+
+#addDeck span {
+  padding: 0 10px;
+}
+
+.iconBtn {
+  cursor: pointer;
+}
+
+@keyframes deckActiveScroll {
+  0% {
+    transform: translate(0, -2px);
+  }
+  100% {
+    transform: translate(-500%, -2px);
+  }
+}
+
+.deckList-activeAnimation {
+  position: absolute;
+  height: 8px;
+  font-size: 10px;
+  background: black;
+  color: white;
+  width: 300%;
+  left: 0;
+  display: none;
+  overflow: hidden;
+}
+
+.deckList-activeAnimation > span {
+  animation: deckActiveScroll 4s linear infinite;
+  display: inline-block;
+  padding-right: 60px;
+}
+
+.deckList-item.active > .deckList-activeAnimation {
+  display: block;
+}
+
+#leftmenuHeader {
+  padding-top: 20px;
+  margin: 0 auto;
+  padding-right: 5%;
+  padding-left: 5%;
+  margin-bottom: 10px;
+}
+
+main {
+  height: calc(100% - 100px);
+  z-index: 100;
+}
+
+#deckList-itemIcon {
+  transform: translateY(-12px);
+  width: 48px;
+}
+
+.deckList-name {
+  font-size: 20px;
+  vertical-align: top;
+}
+
+#loadingScreen {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999;
+  background: #fff;
+  user-select: none;
+}
+
+#loadingScreenContent img {
+  display: block;
+  width: 80%;
+  margin: 30px auto;
+}
+
+#loadingScreenContent {
+  display: block;
+  position: absolute;
+  width: 80%;
+  max-width: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#loadingScreenContent .progress {
+  --bs-progress-bar-bg: #F81;
+  --bs-progress-height: 0.5rem;
+}
+
+.hide {
+  display: none!important;
+}
+
+.tooltip > .tooltip-inner {
+  opacity: .75;
+}
+
+#rightwindow {
+  height: 100%;
+  width: 400px;
+  background: repeating-linear-gradient(-45deg, #fff, #fff 3px, #ccc 0, #ccc 6px);
+  z-index: 2000;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border-left: 1px solid #888;
+}
+
+header {
+  height: 100px;
+  width: 100%;
+  box-shadow: 0 0 5px var(--bs-black);
+  z-index: 5000;
+}
+
+#leftmenu {
+  height: 100%;
+  width: 20%;
+  max-width: 300px;
+  border-right: 1px solid #444;
+}
+
+header .navbar {
+  height: 100%;
+  width: 100%;
+}
+
+header .navbar-brand {
+  padding: 0;
+  height: 100%;
+}
+
+header #navcol-1 {
+  font-size: 20px;
+}
+
+#mainWindow {
+  height: 100%;
+  flex: 1;
+}
+
+#deckList::-webkit-scrollbar {
+  display: none;
+}
+
+#cardList_Header h1 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+#cardList_Header_SearchForm {
+}
+
+#cardList_Header_SF_detailSwitch {
+  display: inline-block;
+}
+
+#cardList_Header {
+  margin: 10px 5px;
+}
+
+#cardList_Header_SF_filterBtn {
+  border-top: 0;
+  border-bottom: 0;
+  font-size: 14px;
+  margin: auto 10px;
+}
+
+#cardList_Header_SF_searchBox {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #888;
+  transition: .3s;
+}
+
+#cardList_Header_SF_searchBox:focus {
+  border-bottom: 1px solid #333;
+}
+
+.cpsdm-cardList-rankContainer {
+  width: calc(100% - 20px);
+  margin: 10px;
+}
+
+.cpsdm-cardList-rankContainer-head {
+  width: calc(100% - 20px);
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #888;
+}
+
+#rankContainer_Content_F {
+  width: 100%;
+  margin: 10px;
+}
+
+.cpsdm-cardList-rankContainer-toggleBtn {
+  background: none!important;
+  border: none!important;
+  color: #000!important;
+  outline: none;
+  box-shadow: none!important;
+}
+
+.cpsdm-cardList-container-list {
+  width: calc(100% - 20px);
+  border: none;
+  list-style: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.cpsdm-cardList-container-list-item {
+  width: 120px;
+  height: 180px;
+  margin: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.cpsdm-cardList-cardDetail {
+  height: 100%;
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: #0005;
+  padding: 10px 0;
+}
+
+.cpsdm-cardList-cardDetail > * {
+  display: block;
+  color: #fff;
+}
+
+.cpsdm-cardList-cardDetail-status {
+  width: 60%;
+  display: block;
+  text-align: center;
+  font-size: var(--cpsdm-cardDetail-stat-size);
+  margin: 10px 20px;
+}
+
+.cpsdm-cardList-cardDetail-status > span::before {
+  content: " ";
+  display: inline-block;
+  width: var(--cpsdm-cardDetail-stat-size);
+  height: var(--cpsdm-cardDetail-stat-size);
+  background-size: contain;
+  background-position: center;
+  margin-right: 16px;
+}
+
+.cpsdm-cardList-cardDetail-status-atk::before {
+  background-image: url(http://cdn.cpsdm.nginx.local/img/icons/stat_attack_w.png);
+}
+
+.cpsdm-cardList-cardDetail-status-def::before {
+  background-image: url(http://cdn.cpsdm.nginx.local/img/icons/stat_defence_w.png);
+}
+
+.cpsdm-cardList-cardDetail-status-phy::before {
+  background-image: url(http://cdn.cpsdm.nginx.local/img/icons/stat_physical_w.png);
+}
+
+.cpsdm-cardList-cardDetail-status-atk > span::before {
+  display: block;
+  width: 100%;
+  line-height: calc(var(--cpsdm-cardDetail-stat-size) - 2px);
+}
+
+.cpsdm-cardList-cardDetail-status > span {
+  display: block;
+  width: 100%;
+  line-height: calc(var(--cpsdm-cardDetail-stat-size) - 2px);
+}
+
+.br {
+  display: inline-block;
+  font-size: 0;
+}
+
+.cpsdm-cardList-cardDetail-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  text-align: center;
+  justify-content: center;
+}
+
+.cpsdm-cardList-cardDetail-info > span.pad {
+  padding: 0 5px;
+}
+
+.cpsdm-cardList-cardDetail-name {
+  line-height: 16px;
+  display: block;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.cpsdm-cardList-cardDetail-buttonBox {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0 0 0;
+}
+
+.cpsdm-cardList-cardDetail-button {
+  background: none;
+  border: none;
+  margin: 0 5px;
+  border-radius: 0;
+  padding: 0;
+  transition: 0.2s;
+  width: 36px;
+}
+
+.cpsdm-cardList-cardDetail-button > svg {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+
+.cpsdm-cardList-cardDetail-button > span {
+  display: block;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  opacity: 0;
+  transition: 0.2s;
+  position: absolute;
+  text-align: center;
+  color: #fff;
+  filter: drop-shadow(0 0 3px #000);
+}
+
+.cpsdm-cardList-cardDetail-button:hover {
+  background: none;
+}
+
+.cpsdm-cardList-cardDetail-button:hover > svg {
+  filter: blur(2px);
+}
+
+.cpsdm-cardList-cardDetail-button:hover > span {
+  opacity: 1;
+}
+
+.cpsdm-cardList-cardDetail-button:active {
+  background: none!important;
+}
+
+#deckBox {
+  width: calc(100% - 20px);
+  margin: 20px 10px;
+}
+
+#deckBox-Title {
+  border-bottom: 2px solid #000;
+}
+
+#deckBox-Title > h2 {
+  display: inline-block;
+  margin: 0;
+}
+
+#deckBox-Title > button {
+  margin: 0;
+  vertical-align: text-bottom;
+  float: right;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+#deckBox-Cards > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.deckBox-card {
+  width: 25%;
+}
+
+.deckBox-card-detail {
+  background: #fff;
+  border: 2px dotted;
+  padding: 2px 1px;
+  font-size: 0;
+}
+
+.deckBox-card-detail-level-input {
+  width: 50px;
+  height: 24px;
+  outline: none;
+}
+
+.deckBox-card-detail-statusBox > span {
+  font-size: 14px;
+  width: 100%;
+  display: block;
+  line-height: 14px;
+}
+
+.deckBox-card-detail-statusBox > span::before {
+  content: " ";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  background-size: contain;
+  background-position: center;
+}
+
+.deckBox-card-detail-statusBox-atk::before {
+  background-image: url(http://cdn.cpsdm.nginx.local/img/icons/stat_attack.png);
+}
+
+.deckBox-card-detail-statusBox-def::before {
+  background-image: url(http://cdn.cpsdm.nginx.local/img/icons/stat_defence.png);
+}
+
+.deckBox-card-detail-statusBox-phy::before {
+  background-image: url(http://cdn.cpsdm.nginx.local/img/icons/stat_physical.png);
+}
+
+.deckBox-card-detail-statusBox {
+  width: 50%;
+  display: inline-block;
+}
+
+.deckBox-card-detail-level {
+  font-size: 16px;
+}
+
+.deckBox-card-detail-info {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 5px;
+  width: calc(50% - 5px);
+}
+
+#deckBox-Cards {
+  margin: 10px 0;
+}
+
+.deckBox-card > img {
+  border: 1px solid #000a;
+}
+
+#deckBox-TotalStatus > h5 {
+  color: #555;
+  border-bottom: 2px solid;
+}
+
+#deckBox-TotalStatus > ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 10px;
+}
+
+.deckBox-TotalStatus-status > span {
+  font-weight: bold;
+  line-height: 20px;
+  vertical-align: top;
+}
+
+.deckBox-TotalStatus-status > span::before {
+  content: " ";
+  display: inline-block;
+  width: var(--cpsdm-cardDetail-stat-size);
+  height: var(--cpsdm-cardDetail-stat-size);
+  background-size: contain;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+
+.deckBox-TotalStatus-status[data-cpsdm-totalstatus="atk"] > span::before {
+  background-image: url(http://cdn.cpsdm.nginx.local/img/icons/stat_attack.png);
+}
+
+.deckBox-TotalStatus-status[data-cpsdm-totalstatus="def"] > span::before {
+  background-image: url(http://cdn.cpsdm.nginx.local/img/icons/stat_defence.png);
+}
+
+.deckBox-TotalStatus-status[data-cpsdm-totalstatus="phy"] > span::before {
+  background-image: url(http://cdn.cpsdm.nginx.local/img/icons/stat_physical.png);
+}
+
+.deckBox-TotalStatus-status-barBox {
+  display: inline-block;
+  border: 2px solid #999;
+  width: calc(100% - 80px);
+  height: 20px;
+  margin-left: 20px;
+  background: #444;
+  font-size: 0;
+}
+
+.deckBox-TotalStatus-status {
+  color: #666;
+}
+
+.deckBox-TotalStatus-status-barBox-val {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  background-color: #ce5;
+  z-index: 100;
+}
+
+.deckBox-TotalStatus-status-barBox-val-plus {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 17%;
+  background-color: #0f0;
+  z-index: 100;
+}
+
+.deckBox-TotalStatus-status-barBox-val-minus {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 7%;
+  background-color: #f80;
+  left: -7%;
+  z-index: 100;
+}
+
+.deckBox-TotalStatus-status-barBox-text {
+  position: absolute;
+  transform: translate(170px,-4px);
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  z-index: 110;
+}
+
+.deckBox-TotalStatus-status-barBox-text-plus {
+  /*color: #4f0;*/
+}
+
+.deckBox-TotalStatus-status-barBox-text-minus {
+  color: #f00;
+}
+
+#deckBox-TotalStatus-HeroCalc {
+  border: 2px solid #888;
+  display: inline-block;
+  background: #fff;
+  float: right;
+  padding: 0 5px;
+}
+

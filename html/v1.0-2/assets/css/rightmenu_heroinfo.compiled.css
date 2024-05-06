@@ -1,0 +1,892 @@
+#heroInfo {
+  margin: 20px 10px;
+}
+#heroInfo #heroInfo-Title {
+  border-bottom: 2px solid #000;
+  margin-bottom: 10px;
+}
+#heroInfo #heroInfo-content {
+  display: flex;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-summary {
+  width: 100px;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-summary > .hero-selectable-btn {
+  border: none;
+  margin: none;
+  background: none;
+  padding: 0;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-summary > .hero-selectable-btn > img {
+  width: 100px;
+  height: 100px;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-summary > .hero-selectable-btn .heroChange {
+  display: block;
+  text-align: center;
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  line-height: 0.95rem;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-summary .heroNick {
+  text-align: center;
+  display: block;
+  font-size: 22px;
+  font-weight: bold;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail {
+  flex: 1;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-statusBox {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-statusBox .heroStatus-status {
+  text-align: right;
+  color: #666;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-statusBox .heroStatus-status > span {
+  font-weight: bold;
+  line-height: 20px;
+  vertical-align: top;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-statusBox .heroStatus-status > span::before {
+  content: " ";
+  display: inline-block;
+  width: var(--cpsdm-cardDetail-stat-size);
+  height: var(--cpsdm-cardDetail-stat-size);
+  background-size: contain;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-statusBox .heroStatus-status[data-cpsdm-herostatus=atk] > span::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_attack.png);
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-statusBox .heroStatus-status[data-cpsdm-herostatus=def] > span::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_defence.png);
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-statusBox .heroStatus-status[data-cpsdm-herostatus=phy] > span::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_physical.png);
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-statusBox .heroStatus-status .heroStatus-BarBox {
+  display: inline-block;
+  border: 2px solid #999;
+  width: calc(100% - 80px);
+  height: 20px;
+  background: #444;
+  font-size: 0;
+  text-align: left;
+  position: relative;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-statusBox .heroStatus-status .heroStatus-BarBox .heroStatus-BarBox-text {
+  position: absolute;
+  transform: translate(100px, -4px);
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  z-index: 110;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-statusBox .heroStatus-status .heroStatus-BarBox .heroStatus-BarBox-val {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  background-color: #ee7a55;
+  z-index: 100;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-detailStatus {
+  display: flex;
+  color: #666;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-detailStatus .heroDetailStatus {
+  display: inline-block;
+  font-weight: bold;
+  margin: 0 10px;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-detailStatus .heroDetailStatus::before {
+  content: " ";
+  display: inline-block;
+  width: var(--cpsdm-cardDetail-stat-size);
+  height: var(--cpsdm-cardDetail-stat-size);
+  background-size: contain;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-detailStatus .heroDetailStatus[data-cpsdm-herostatus=len]::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/herostat_len.png);
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-detailStatus .heroDetailStatus[data-cpsdm-herostatus=spd]::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/herostat_spd.png);
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons {
+  display: flex;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-Medals {
+  margin: 0;
+  display: flex;
+  flex: 3;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-Medals > li {
+  flex: 1;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-Medals > li > div {
+  position: relative;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-Medals > li > div > img {
+  position: absolute;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-Medals > li > div > img.medal_base {
+  width: 100%;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-Medals > li > div > img.medal_icon {
+  width: 65%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 22.5%);
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-MedalEnableBtnContainer {
+  flex: 2;
+  margin-left: 10px;
+  user-select: none;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-MedalEnableBtnContainer > * {
+  display: block;
+  width: 100%;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-MedalEnableBtnContainer[btn-stat-enable="0"] > div > .status-text {
+  color: #f33;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-MedalEnableBtnContainer[btn-stat-enable="1"] > div > .status-text {
+  color: #3f3;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-MedalEnableBtnContainer .btn-label {
+  font-weight: bold;
+  line-height: 16px;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-MedalEnableBtnContainer > div {
+  background: #666;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-MedalEnableBtnContainer > div .status-text {
+  width: calc(100% - 52px);
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+}
+#heroInfo #heroInfo-content #heroInfo-cont-detail #heroInfo-cont-buttons #heroInfo-MedalEnableBtnContainer > div .change-btn {
+  width: 52px;
+  outline: none;
+  border: 3px solid #9b530a;
+  background: var(--cps-theme);
+  color: #fff;
+  box-shadow: 0 0 2px rgb(0, 8, 54);
+}
+#heroInfo #heroInfo-more {
+  margin-top: 10px;
+  max-height: 100%;
+  position: relative;
+}
+#heroInfo #heroInfo-more .page-change-buttons {
+  right: 0;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.4));
+  position: absolute;
+  z-index: 2000;
+}
+#heroInfo #heroInfo-more .page-change-buttons > button {
+  outline: none;
+  background: #fff;
+  border: none;
+}
+#heroInfo #heroInfo-more .page-change-buttons > button:first-child {
+  border-radius: 5px 0 0 5px;
+}
+#heroInfo #heroInfo-more .page-change-buttons > button:last-child {
+  border-radius: 0 5px 5px 0;
+}
+#heroInfo #heroInfo-more .page-change-buttons > button.selected {
+  box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3333333333);
+}
+#heroInfo #heroInfo-more .page-container {
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  transition: 0.5s;
+}
+#heroInfo #heroInfo-more .page-container[page-index="0"] {
+  transform: translateX(0);
+}
+#heroInfo #heroInfo-more .page-container[page-index="1"] {
+  transform: translateX(-400px);
+}
+#heroInfo #heroInfo-more .page-container[page-index="2"] {
+  transform: translateX(-800px);
+}
+#heroInfo #heroInfo-more .page-container .page {
+  width: 360px;
+  display: inline-block;
+  margin-right: 40px;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-info .infoBox {
+  width: 100%;
+  font-size: 18px;
+  line-height: 20px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.5333333333);
+  padding: 10px;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-info .infoBox > span {
+  display: block;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-info .status-selector {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  list-style: none;
+  padding: 10px 10px;
+  margin-top: 10px;
+  background-size: auto auto;
+  background-color: rgb(128, 128, 128);
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 5px, rgb(162, 162, 162) 5px, rgb(162, 162, 162) 6px);
+}
+#heroInfo #heroInfo-more .page-container .page.hero-info .status-selector > li {
+  border: 2px solid #eee;
+  height: 60px;
+  width: 60px;
+  margin: auto 6px;
+  box-shadow: 0 0 3px #003;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-info .status-selector > li > .status-selector-item {
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-info .status-selector > li > .status-selector-item > span.title {
+  font-weight: bold;
+  color: #eee;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-info .status-selector > li.selected > .status-selector-item {
+  background-size: auto auto;
+  background-color: rgb(43, 43, 43);
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 5px, rgb(109, 109, 109) 5px, rgb(109, 109, 109) 6px);
+  opacity: 1;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-features {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-features .hero_feature {
+  width: 100%;
+  padding: 0px 10px 3px 10px;
+  margin: 3px 0;
+  background: #eee;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-features .hero_feature .title {
+  border-bottom: 1px solid #666;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-features .hero_feature .title .head {
+  width: 60px;
+  background: #333;
+  line-height: 16px;
+  font-size: 14px;
+  clip-path: polygon(0 0, 90% 0%, 100% 50%, 90% 100%, 0 100%);
+  display: inline-block;
+  margin-right: 10px;
+  color: white;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-features .hero_feature .title .content {
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-features .hero_feature .description {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-features .hero_feature .description .main {
+  color: #333;
+  font-weight: bold;
+}
+#heroInfo #heroInfo-more .page-container .page.hero-features .hero_feature .description .val {
+  color: #333;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data {
+  padding-top: 10px;
+  /*
+  .nockbacks {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0;
+
+    .nockback {
+      flex: 1;
+      margin: 0 5px;
+      background: #f1f1f1;
+      height: 60px;
+      text-align: center;
+
+      .title {
+        color: #333;
+        display: block;
+        font-size: 14px;
+      }
+
+      img.val {
+        height: 60%;
+        margin: 0 auto;
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  */
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times {
+  display: block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.5333333333);
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+  line-height: 24px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time1_container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 5px;
+  border-bottom: 2px solid #888;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time1_container .time1_item {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time1_container .time1_item .label {
+  border-right: 1px solid #888;
+  height: 100%;
+  display: block;
+  padding-right: 5px;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time1_container .time1_item .value_group {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time1_container .time1_item .value_group > span {
+  display: block;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time1_container .time1_item .value_group > span > strong {
+  font-size: 22px;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time2_container {
+  display: flex;
+  flex-direction: column;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time2_container .time2_group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time2_container .time2_group .time2_item {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  margin: 5px;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time2_container .time2_group .time2_item .label_image {
+  height: 40px;
+  margin: 0 5px;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time2_container .time2_group .time2_item .value_group {
+  display: flex;
+  flex-direction: column;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time2_container .time2_group .time2_item .value_group > span {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+}
+#heroInfo #heroInfo-more .page-container .page.card-data .card-times .time2_container .time2_group .time2_item .value_group > span > strong {
+  font-size: 26px;
+}
+
+::selection {
+  color: #fff;
+  background: var(--cps-theme);
+}
+
+#ModalsContainer div.modal .modal-content {
+  border-radius: 0;
+  border: none;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="1"] {
+  overflow-y: hidden;
+  transition-duration: 0.1s;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="1"] .modal-dialog {
+  transition: 0.1s;
+  opacity: 1;
+  transform: none;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="1"]:not(.show) {
+  transition-duration: 0.3s;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="1"]:not(.show) .modal-dialog {
+  transform: translateY(100vh);
+  transition-duration: 0.3s;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="1"].show {
+  transition-duration: 0;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="1"].show .modal-dialog {
+  transition-duration: 0.1s;
+  transform: translateY(0);
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="2"] .modal-dialog {
+  transition: 0.15s;
+  opacity: 1;
+  transform: none;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="2"]:not(.show) .modal-dialog {
+  transform: scale(0.4);
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="2"].show .modal-dialog {
+  transform: scale(1);
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="3"] .modal-dialog {
+  transition: 0.15s;
+  opacity: 1;
+  transform: none;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="3"]:not(.show) .modal-dialog {
+  transform: scale(2);
+  opacity: 0;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="3"].show .modal-dialog {
+  transform: scale(1);
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="4"] {
+  overflow-y: hidden;
+  transition-duration: 0.2s;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="4"] .modal-dialog {
+  transition: 0.2s;
+  opacity: 1;
+  transform: none;
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="4"]:not(.show) .modal-dialog {
+  transform: translateX(100vw);
+}
+#ModalsContainer div.modal.fade.cpsdm-modal-custom-animation[data-modal-animation="4"].show .modal-dialog {
+  transform: translateX(0);
+}
+#ModalsContainer #modal-Hero {
+  color: #eee;
+}
+#ModalsContainer #modal-Hero .modal-dialog {
+  width: 80%;
+  max-width: 800px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content {
+  background: rgba(0, 0, 0, 0.7333333333);
+  padding: 10px 30px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .btn-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none !important;
+  box-shadow: none !important;
+  opacity: 1;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-title h5 {
+  font-weight: normal;
+  font-size: 18px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container {
+  display: flex;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-left {
+  flex-basis: 45%;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-left img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-left .infoBox {
+  width: 100%;
+  font-size: 20px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-left .infoBox > span {
+  display: block;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-left .description {
+  margin: 20px auto;
+  text-align: center;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-left .official_introduction table {
+  border-spacing: 0;
+  border-collapse: separate;
+  border-radius: 6px;
+  border: 2px solid #aaa;
+  width: 100%;
+  margin: 0 auto;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-left .official_introduction table thead tr th {
+  text-align: center;
+  border-bottom: 1px solid #aaa;
+  background: #281a14;
+  border-radius: 6px 6px 0 0;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-left .official_introduction table tbody tr {
+  background: #3f3f3f;
+  font-size: 12px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-left .official_introduction table tbody tr td {
+  padding: 0 4px;
+  border-bottom: 1px solid #aaa;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-left .official_introduction table tbody tr:last-child td {
+  border-bottom: none;
+  border-radius: 0 0 6px 6px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right {
+  flex-basis: 55%;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-StatusBox {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+  position: relative;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-StatusBox .heroStatus-status {
+  text-align: right;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-StatusBox .heroStatus-status > span {
+  font-weight: bold;
+  line-height: 22px;
+  vertical-align: top;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-StatusBox .heroStatus-status > span::before {
+  content: " ";
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-StatusBox .heroStatus-status[data-cpsdm-herostatus=atk] > span::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_attack_w.png);
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-StatusBox .heroStatus-status[data-cpsdm-herostatus=def] > span::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_defence_w.png);
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-StatusBox .heroStatus-status[data-cpsdm-herostatus=phy] > span::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_physical_w.png);
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-StatusBox .heroStatus-status .heroStatus-BarBox {
+  display: inline-block;
+  border: 2px solid #999;
+  width: calc(100% - 80px);
+  height: 22px;
+  background: #444;
+  font-size: 0;
+  text-align: left;
+  margin-left: 10px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-StatusBox .heroStatus-status .heroStatus-BarBox .heroStatus-BarBox-text {
+  position: absolute;
+  right: 0;
+  transform: translate(-30px, 0px);
+  display: inline-block;
+  font-size: 16px;
+  line-height: 16px;
+  color: #fff;
+  z-index: 110;
+  font-weight: bold;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-StatusBox .heroStatus-status .heroStatus-BarBox .heroStatus-BarBox-val {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  background-color: #ee7a55;
+  z-index: 100;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-moreStatusBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3px 0;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-moreStatusBox .status {
+  display: block;
+  flex: 1;
+  font-weight: bold;
+  font-size: 16px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-moreStatusBox .status > span::before {
+  content: " ";
+  display: inline-block;
+  background-size: cover;
+  background-position: center;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
+  line-height: 22px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-moreStatusBox .status[data-cpsdm-herostatus=spd] > span.status_lbl::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/herostat_spd_w.png);
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-moreStatusBox .status[data-cpsdm-herostatus=len] > span.status_lbl::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/herostat_len_w.png);
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-moreStatusBox .status[data-cpsdm-herostatus=atkSpd] > span.status_lbl::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/herostat_atkSpd_w.png);
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-moreStatusBox .status.status_atkspd > * {
+  display: inline;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-moreStatusBox .status.status_atkspd .atkspd_res {
+  margin-left: 5px;
+  font-weight: normal;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-moreStatusBox .status.status_atkspd .atkspd_input > input.atkspd_num {
+  width: 50px;
+  line-height: 16px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .heroInfoContainer-moreStatusBox .status.status_atkspd .atkspd_input > .atkspd_unit {
+  font-weight: normal;
+  font-size: 12px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .hero_features {
+  display: flex;
+  flex-direction: column;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .hero_features .hero_feature {
+  width: 100%;
+  padding: 0px 10px 3px 10px;
+  margin: 3px 0;
+  background: #ddd;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .hero_features .hero_feature .title {
+  border-bottom: 1px solid #666;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .hero_features .hero_feature .title .head {
+  width: 60px;
+  background: #333;
+  line-height: 16px;
+  font-size: 14px;
+  clip-path: polygon(0 0, 90% 0%, 100% 50%, 90% 100%, 0 100%);
+  display: inline-block;
+  margin-right: 10px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .hero_features .hero_feature .title .content {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .hero_features .hero_feature .description {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .hero_features .hero_feature .description .main {
+  color: #333;
+  font-weight: bold;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .hero_features .hero_feature .description .val {
+  color: #333;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .nockbacks {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .nockbacks .nockback {
+  flex: 1;
+  margin: 0 5px;
+  background: #ddd;
+  height: 60px;
+  text-align: center;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .nockbacks .nockback .title {
+  color: #333;
+  display: block;
+  font-size: 14px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .nockbacks .nockback img.val {
+  height: 60%;
+  margin: 0 auto;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .nockbacks .nockback:first-child {
+  margin-left: 0;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .nockbacks .nockback:last-child {
+  margin-right: 0;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times {
+  display: block;
+  width: 100%;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background: #888;
+  line-height: 20px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time1_container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 5px;
+  border-bottom: 1px solid #888;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time1_container .time1_item {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time1_container .time1_item .label {
+  border-right: 2px solid #eee;
+  height: 100%;
+  display: block;
+  padding-right: 5px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time1_container .time1_item .value_group {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time1_container .time1_item .value_group > span {
+  display: block;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time1_container .time1_item .value_group > span > strong {
+  font-size: 22px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time2_container {
+  display: flex;
+  flex-direction: column;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time2_container .time2_group {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time2_container .time2_group .time2_item {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+  margin: 5px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time2_container .time2_group .time2_item .label_image {
+  height: 40px;
+  margin: 0 5px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time2_container .time2_group .time2_item .value_group {
+  display: flex;
+  flex-direction: column;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time2_container .time2_group .time2_item .value_group > span {
+  display: block;
+  text-align: left;
+  font-size: 16px;
+  line-height: 20px;
+}
+#ModalsContainer #modal-Hero .modal-dialog .modal-content .hero-info-container .hero-info-container-right .card-times .time2_container .time2_group .time2_item .value_group > span > strong {
+  font-size: 26px;
+}
+#ModalsContainer #modal-HeroSelect .hero-select-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#ModalsContainer #modal-HeroSelect .hero-select-list .hero-select-list-item {
+  padding: 0;
+  width: 100px;
+  height: 126px;
+  border-radius: 0 !important;
+  text-align: center;
+}
+#ModalsContainer #modal-HeroSelect .hero-select-list .hero-select-list-item img {
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes CPSDM_ModalAnimation1 {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes CPSDM_ModalAnimation2 {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
