@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>#コンパス DECKMAKER</title>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "#コンパス DECKMAKER",
+            "url": "https://cps.mfmii.work/deckmaker/"
+        }
+    </script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/DFSoGeiStd-W7.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/card_info.compiled.css">
+    <link rel="stylesheet" href="assets/css/CPS-Button.css">
+    <link rel="stylesheet" href="assets/css/CPS-Button.compiled.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/rightmenu_heroinfo.compiled.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/switch.css">
+</head>
+
+<body style="height: 100vh;">
+    <div id="ModalsContainer">
+        <div class="modal fade cpsdm-modal-custom-animation" role="dialog" tabindex="-1" id="modal-Hero" data-bs-theme="dark" data-modal-animation="1">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content"><button class="btn-close btn-close-white" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    <div class="hero-info-title">
+                        <h1>メグメグ</h1>
+                        <h5>通称: メグ, 姫</h5>
+                    </div>
+                    <div class="hero-info-container">
+                        <!-- Start: LeftContainer -->
+                        <div class="hero-info-container-left"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/fullbody/o19.png">
+                            <div class="infoBox"><span>ILLUST: ぽあろ</span><span>CV: 天野 心愛&amp;中尾 隆聖</span><span>Motion: 217</span><span>Music:&nbsp;<a class="herosong-link" href="#">バイオレンストリガー</a>&nbsp;(八王子P)</span></div>
+                            <p class="description">おませで危険な兵器マニアの少女<br>愛用の「ガトりん」で嗜虐の限りを尽くす</p>
+                            <div class="official_introduction">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>メグメグの特徴</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>&nbsp;目にもとまらぬ速さで撃ちまくるガンナーです。1発の威力は低く、防御力が高い敵は苦手です。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>攻撃的なヒーローアクションとアビリティで、積極的に戦いたい人に向いていますよ。</td>
+                                        </tr>
+                                        <tr>
+                                            <td>ヒーロースキルは、射程が無限の設置型ガトリングです。1試合に複数置くことも可能ですよ。</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div><!-- End: LeftContainer -->
+                        <!-- Start: RightContainer -->
+                        <div class="hero-info-container-right">
+                            <!-- Start: HeroStatus -->
+                            <ul class="heroInfoContainer-StatusBox">
+                                <li class="heroStatus-status" data-cpsdm-herostatus="atk"><span>攻撃</span>
+                                    <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                        <div class="heroStatus-BarBox-val"></div>
+                                    </div>
+                                </li>
+                                <li class="heroStatus-status" data-cpsdm-herostatus="def"><span>防御</span>
+                                    <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                        <div class="heroStatus-BarBox-val"></div>
+                                    </div>
+                                </li>
+                                <li class="heroStatus-status" data-cpsdm-herostatus="phy"><span>体力</span>
+                                    <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                        <div class="heroStatus-BarBox-val"></div>
+                                    </div>
+                                </li>
+                            </ul><!-- End: HeroStatus -->
+                            <!-- Start: MoreStatus -->
+                            <div class="heroInfoContainer-moreStatusBox">
+                                <div class="status" data-cpsdm-herostatus="len"><span class="status_lbl">射程:</span></div>
+                                <div class="status" data-cpsdm-herostatus="spd"><span class="status_lbl">移動速度:</span></div>
+                            </div><!-- End: MoreStatus -->
+                            <!-- Start: MoreStatus -->
+                            <div class="heroInfoContainer-moreStatusBox">
+                                <div class="status status_atkspd" data-cpsdm-herostatus="atkSpd"><span class="status_lbl">通常攻撃速度:</span>
+                                    <div class="atkspd_res"><span class="atkspd_val">00.00秒</span><span class="atkspd_afterVal">(硬直00.00秒)</span><span>/</span></div>
+                                    <div class="atkspd_input"><input class="form-control-sm atkspd_num" type="number" min="1" value="1"><span class="atkspd_unit">段目</span></div>
+                                </div>
+                            </div><!-- End: MoreStatus -->
+                            <!-- Start: HeroFeatures(HA,HS,Ab) -->
+                            <div class="hero_features">
+                                <div class="hero_feature">
+                                    <div class="title"><span class="head">ﾋｰﾛｰｽｷﾙ</span><span class="content">がとりんMKⅡ せっち</span></div>
+                                    <p class="description"><span class="main">設置型ガトリングで敵を自動攻撃(最大2機まで)</span><br>タメ時間: 約9秒&nbsp; |&nbsp; 無敵時間: 約2.9秒(初回のみ約7.0秒)<br>射程: 無限 | 攻撃倍率: 約×0.88&nbsp; |&nbsp; 設置時間: 36秒</p>
+                                </div>
+                                <div class="hero_feature">
+                                    <div class="title"><span class="head">ｱｸｼｮﾝ</span><span class="content">回転式機関銃攻撃／ばっちーのショードク</span></div>
+                                    <p class="description">設置型ガトリングで敵を自動攻撃(最大2機まで)</p>
+                                </div>
+                                <div class="hero_feature">
+                                    <div class="title"><span class="head">ｱﾋﾞﾘﾃｨ</span><span class="content">デンジャラス ハイテンション</span></div>
+                                    <p class="description">敵にダメージを与えるたびにHSゲージ回復<br>(1ﾀﾞﾒ=1/80, 2ﾀﾞﾒ以上=1/40)</p>
+                                </div>
+                            </div><!-- End: HeroFeatures(HA,HS,Ab) -->
+                            <!-- Start: NockBacks -->
+                            <div class="nockbacks">
+                                <!-- Start: NockBack -->
+                                <div class="nockback"><span class="title">プッシュ量(水平)</span><img class="val" src="http://cpsdm-assets.local.mfmii.work/img/icons/nb_rep_s.png"></div><!-- End: NockBack -->
+                                <!-- Start: NockBack -->
+                                <div class="nockback"><span class="title">ランチ量(放物線)</span><img class="val" src="http://cpsdm-assets.local.mfmii.work/img/icons/nb_rep_s.png"></div><!-- End: NockBack -->
+                                <!-- Start: NockBack -->
+                                <div class="nockback"><span class="title">ブラスト量(垂直)</span><img class="val" src="http://cpsdm-assets.local.mfmii.work/img/icons/nb_rep_s.png"></div><!-- End: NockBack -->
+                            </div><!-- End: NockBacks -->
+                            <!-- Start: CardTimes -->
+                            <div class="card-times">
+                                <!-- Start: Title --><span class="title">カード発動時間</span><!-- End: Title -->
+                                <!-- Start: Times1 -->
+                                <div class="time1_container">
+                                    <div class="time1_item"><span class="label">無</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                    <div class="time1_item"><span class="label">短</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                    <div class="time1_item"><span class="label">長</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                </div><!-- End: Times1 -->
+                                <!-- Start: Times2 -->
+                                <div class="time2_container">
+                                    <!-- Start: Group -->
+                                    <div class="time2_group">
+                                        <!-- Start: Item -->
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div><!-- End: Item -->
+                                        <!-- Start: Item -->
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div><!-- End: Item -->
+                                    </div><!-- End: Group -->
+                                    <!-- Start: Group -->
+                                    <div class="time2_group">
+                                        <!-- Start: Item -->
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div><!-- End: Item -->
+                                        <!-- Start: Item -->
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div><!-- End: Item -->
+                                    </div><!-- End: Group -->
+                                    <!-- Start: Group -->
+                                    <div class="time2_group">
+                                        <!-- Start: Item -->
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div><!-- End: Item -->
+                                    </div><!-- End: Group -->
+                                </div><!-- End: Times2 -->
+                            </div><!-- End: CardTimes -->
+                        </div><!-- End: RightContainer -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade cpsdm-modal-custom-animation" role="dialog" tabindex="-1" id="modal-Medal" data-bs-theme="dark" data-modal-animation="2">
+            <div class="modal-dialog modal-dialog-scrollable" role="document">
+                <div class="modal-content"><button class="btn-close btn-close-white" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    <div class="hero-info-title">
+                        <h1>メダル編集</h1>
+                        <h5>メグメグ</h5>
+                    </div>
+                    <div class="medaledit-container">
+                        <!-- Start: LeftContainer -->
+                        <div class="medaledit-container-left">
+                            <div class="medalPallet">
+                                <!-- Start: CurrentMedal -->
+                                <div class="medaledit-medalSelect"><span class="lbl_select">▼変更するメダルを選択</span><!-- Start: MedalCurrent -->
+                                    <div class="medal-current cps-bg">
+                                        <div class="medals"><button class="medal selected" type="button"><img src="assets/img/MedalBase01.png"></button><button class="medal" type="button"><img src="http://cpsdm-assets.local.mfmii.work/img/icons/medal_base_0.png"></button><button class="medal" type="button"><img src="http://cpsdm-assets.local.mfmii.work/img/icons/medal_base_0.png"></button></div>
+                                    </div><!-- End: MedalCurrent -->
+                                </div><!-- End: CurrentMedal -->
+                                <!-- Start: ColorSelector -->
+                                <div class="medalPallet-selector-container"><span>▼色を選択</span>
+                                    <div class="medalPallet-selector"><img class="item selected" src="assets/img/MedalBase01.png"><img class="item" src="assets/img/MedalBase01.png"><img class="item" src="assets/img/MedalBase01.png"><img class="item" src="assets/img/MedalBase01.png"></div>
+                                </div><!-- End: ColorSelector -->
+                                <!-- Start: EffectSelector -->
+                                <div class="medalPallet-selector-container"><span>▼効果を選択</span>
+                                    <div class="medalPallet-selector"><img class="item selected" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"><img class="item" src="assets/img/MedalIcon001.png"></div>
+                                </div><!-- End: EffectSelector -->
+                                <!-- Start: ValueSelector -->
+                                <div class="medalPallet-selector-container"><span>▼効果量を選択</span>
+                                    <div class="medalPallet-selector"><span class="item selected">+1</span><span class="item">+2</span><span class="item">+3</span></div>
+                                </div><!-- End: ValueSelector -->
+                                <div class="medalPallet-cancel">
+                                    <!-- Start: CPS-Button --><button class="cps-btn cancel" type="button">メダルをはずす</button><!-- End: CPS-Button -->
+                                </div>
+                            </div>
+                        </div><!-- End: LeftContainer -->
+                        <!-- Start: RightContainer -->
+                        <div class="medaledit-container-right">
+                            <!-- Start: HeroStatus -->
+                            <ul class="medaledit-container-statusBox">
+                                <li class="heroStatus-status" data-cpsdm-status="atk"><span>攻撃</span>
+                                    <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                        <div class="heroStatus-BarBox-val"></div>
+                                    </div>
+                                </li>
+                                <li class="heroStatus-status" data-cpsdm-status="def"><span>防御</span>
+                                    <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                        <div class="heroStatus-BarBox-val"></div>
+                                    </div>
+                                </li>
+                                <li class="heroStatus-status" data-cpsdm-status="phy"><span>体力</span>
+                                    <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                        <div class="heroStatus-BarBox-val"></div>
+                                    </div>
+                                </li>
+                            </ul><!-- End: HeroStatus -->
+                            <!-- Start: MoreStatus -->
+                            <div class="medaledit-container-moreStatusBox">
+                                <div class="status" data-cpsdm-status="spd"><span class="status_lbl">移動速度:</span></div>
+                            </div><!-- End: MoreStatus -->
+                            <!-- Start: Speeds -->
+                            <div class="multi-info-container">
+                                <!-- Start: Title --><span class="title">速度 軽減率</span><!-- End: Title -->
+                                <div class="multi-info-contents">
+                                    <!-- Start: Spd -->
+                                    <div class="infodata">
+                                        <!-- Start: InfoTitle --><span class="title">カードクールタイム(CT)</span><!-- End: InfoTitle -->
+                                        <div class="attr-info"><img class="attr" src="http://cpsdm-assets.local.mfmii.work/img/icons/medal_cardcool.jpg"><span class="val">-12.34%</span></div>
+                                    </div><!-- End: Spd -->
+                                    <!-- Start: Spd -->
+                                    <div class="infodata">
+                                        <!-- Start: InfoTitle --><span class="title">ポータルキー 取得速度</span><!-- End: InfoTitle -->
+                                        <div class="attr-info"><img class="attr" src="http://cpsdm-assets.local.mfmii.work/img/icons/medal_keyspeed.jpg"><span class="val">-12.34%</span></div>
+                                    </div><!-- End: Spd -->
+                                </div>
+                            </div><!-- End: Speeds -->
+                            <!-- Start: Condition -->
+                            <div class="multi-info-container">
+                                <!-- Start: Title --><span class="title">状態異常 軽減率</span><!-- End: Title -->
+                                <div class="multi-info-contents">
+                                    <!-- Start: Cond -->
+                                    <div class="infodata">
+                                        <!-- Start: InfoTitle --><span class="title">スタン</span><!-- End: InfoTitle -->
+                                        <div class="attr-info"><img class="attr" src="http://cpsdm-assets.local.mfmii.work/img/icons/medal_cond_stan.jpg"><span class="val">-12.34%</span></div>
+                                    </div><!-- End: Cond -->
+                                    <!-- Start: Cond -->
+                                    <div class="infodata">
+                                        <!-- Start: InfoTitle --><span class="title">サイレント</span><!-- End: InfoTitle -->
+                                        <div class="attr-info"><img class="attr" src="http://cpsdm-assets.local.mfmii.work/img/icons/medal_cond_silent.jpg"><span class="val">-12.34%</span></div>
+                                    </div><!-- End: Cond -->
+                                    <!-- Start: Cond -->
+                                    <div class="infodata">
+                                        <!-- Start: InfoTitle --><span class="title">毒</span><!-- End: InfoTitle -->
+                                        <div class="attr-info"><img class="attr" src="http://cpsdm-assets.local.mfmii.work/img/icons/medal_cond_poison.jpg"><span class="val">-12.34%</span></div>
+                                    </div><!-- End: Cond -->
+                                </div>
+                            </div><!-- End: Condition -->
+                            <!-- Start: AttrDmg -->
+                            <div class="multi-info-container">
+                                <!-- Start: Title --><span class="title">属性ダメージ軽減率</span><!-- End: Title -->
+                                <div class="multi-info-contents">
+                                    <!-- Start: Attr -->
+                                    <div class="infodata">
+                                        <!-- Start: InfoTitle --><span class="title">火属性</span><!-- End: InfoTitle -->
+                                        <div class="attr-info"><img class="attr" src="http://cpsdm-assets.local.mfmii.work/img/icons/medal_attr_fire.jpg"><span class="val">-12.34%</span></div>
+                                    </div><!-- End: Attr -->
+                                    <!-- Start: Attr -->
+                                    <div class="infodata">
+                                        <!-- Start: InfoTitle --><span class="title">水属性</span><!-- End: InfoTitle -->
+                                        <div class="attr-info"><img class="attr" src="http://cpsdm-assets.local.mfmii.work/img/icons/medal_attr_water.jpg"><span class="val">-12.34%</span></div>
+                                    </div><!-- End: Attr -->
+                                    <!-- Start: Attr -->
+                                    <div class="infodata">
+                                        <!-- Start: InfoTitle --><span class="title">木属性</span><!-- End: InfoTitle -->
+                                        <div class="attr-info"><img class="attr" src="http://cpsdm-assets.local.mfmii.work/img/icons/medal_attr_wood.jpg"><span class="val">-12.34%</span></div>
+                                    </div><!-- End: Attr -->
+                                </div>
+                            </div><!-- End: AttrDmg -->
+                        </div><!-- End: RightContainer -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade cpsdm-modal-custom-animation" role="dialog" tabindex="-1" id="modal-HeroSelect" data-modal-animation="3">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">ヒーローを選択</h4>
+                        <div class="hero-search-container"><input type="search" class="hero-search-query" placeholder="キーワードを入力...">
+                            <div class="dropdown role-sel-dd"><button class="btn btn-sm dropdown-toggle role-sel-dd-btn" aria-expanded="false" data-bs-toggle="dropdown" type="button">表示ロール</button>
+                                <div class="dropdown-menu"><a class="dropdown-item selected" href="#">標準</a><a class="dropdown-item" href="#">アタッカー</a><a class="dropdown-item" href="#">ガンナー</a><a class="dropdown-item" href="#">スプリンター</a><a class="dropdown-item" href="#">タンク</a></div>
+                            </div>
+                        </div><button class="btn-close btn-close-white" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="hero-select-title"><span>スプリンター</span></div>
+                        <ul class="list-group hero-select-list">
+                            <li class="list-group-item hero-select-list-item"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/icon/o01.png"><span>十文字アタリ</span></li>
+                            <li class="list-group-item hero-select-list-item"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/icon/o01.png"><span>十文字アタリ</span></li>
+                            <li class="list-group-item hero-select-list-item"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/icon/o01.png"><span>十文字アタリ</span></li>
+                            <li class="list-group-item hero-select-list-item"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/icon/o01.png"><span>十文字アタリ</span></li>
+                            <li class="list-group-item hero-select-list-item"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/icon/o01.png"><span>十文字アタリ</span></li>
+                            <li class="list-group-item hero-select-list-item"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/icon/o01.png"><span>十文字アタリ</span></li>
+                            <li class="list-group-item hero-select-list-item"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/icon/o01.png"><span>十文字アタリ</span></li>
+                            <li class="list-group-item hero-select-list-item"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/icon/o01.png"><span>十文字アタリ</span></li>
+                            <li class="list-group-item hero-select-list-item selected"><img src="http://cpsdm-assets.local.mfmii.work/img/hero/icon/o01.png"><span>十文字アタリ</span></li>
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <!-- Start: CPS-Button --><button class="cps-btn cancel" type="button" data-bs-dismiss="modal">閉じる</button><!-- End: CPS-Button -->
+                        <!-- Start: CPS-Button --><button class="cps-btn ok" type="button">変更</button><!-- End: CPS-Button -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade cpsdm-modal-custom-animation" role="dialog" tabindex="-1" id="modal-SearchFilter" data-modal-animation="2">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body"><button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button><span class="text-danger"><strong>※一部チェックボックスは、連動してON(回復:ポータル→回復:継続)</strong><br><strong>※カードタイプなどにより動的に要素の表示切替</strong><br><strong>※検索ボックスはタグ入力フォームにする</strong></span>
+                        <form><input class="form-control search-query" type="search" placeholder="キーワード..."><!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">レアリティ</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">UR</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-4"><label class="form-check-label" for="formCheck-4">SR</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-3"><label class="form-check-label" for="formCheck-3">R</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-2">N</label></div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">カードタイプ</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-13"><label class="form-check-label" for="formCheck-13">近</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-14"><label class="form-check-label" for="formCheck-14">遠</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-15"><label class="form-check-label" for="formCheck-15">連</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-16"><label class="form-check-label" for="formCheck-16">周</label></div>
+                                </div>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-17"><label class="form-check-label" for="formCheck-17">癒</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-18"><label class="form-check-label" for="formCheck-18">防</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-19"><label class="form-check-label" for="formCheck-19">強</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-20"><label class="form-check-label" for="formCheck-20">弱</label></div>
+                                </div>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-21"><label class="form-check-label" for="formCheck-21">移</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-22"><label class="form-check-label" for="formCheck-22">罠</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-23"><label class="form-check-label" for="formCheck-23">反</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-24"><label class="form-check-label" for="formCheck-24">他</label></div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">属性</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-5"><label class="form-check-label" for="formCheck-5">火属性</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-6"><label class="form-check-label" for="formCheck-6">水属性</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-7"><label class="form-check-label" for="formCheck-7">木属性</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-43"><label class="form-check-label" for="formCheck-43">無属性</label></div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">状態異常</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-8"><label class="form-check-label" for="formCheck-8">スタン</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-9"><label class="form-check-label" for="formCheck-9">サイレント</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-10"><label class="form-check-label" for="formCheck-10">毒</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-27"><label class="form-check-label" for="formCheck-27">閃光</label></div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">バフ効果</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-11"><label class="form-check-label" for="formCheck-11">攻撃</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-12"><label class="form-check-label" for="formCheck-12">防御</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-25"><label class="form-check-label" for="formCheck-25">移動速度</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-26"><label class="form-check-label" for="formCheck-26">全行動速度</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-63"><label class="form-check-label" for="formCheck-63">吸収</label></div>
+                                </div>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-52"><label class="form-check-label" for="formCheck-52">自身</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-53"><label class="form-check-label" for="formCheck-53">全体</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-62"><label class="form-check-label" for="formCheck-62">ダメージ引換(自傷)</label></div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">デバフ効果</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-54"><label class="form-check-label" for="formCheck-54">攻撃</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-55"><label class="form-check-label" for="formCheck-55">防御</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-56"><label class="form-check-label" for="formCheck-56">移動速度</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-57"><label class="form-check-label" for="formCheck-57">全行動速度</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-64"><label class="form-check-label" for="formCheck-64">バフ解除</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-65"><label class="form-check-label" for="formCheck-65">ガードブレイク</label></div>
+                                </div>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-58"><label class="form-check-label" for="formCheck-58">前方</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-59"><label class="form-check-label" for="formCheck-59">全体</label></div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">攻撃詳細</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-36"><label class="form-check-label" for="formCheck-36">通常</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-37"><label class="form-check-label" for="formCheck-37">貫通</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-66"><label class="form-check-label" for="formCheck-66">ガードブレイク(<strong><span style="color: rgb(255, 0, 0);">※近・周のみ有効にする</span></strong>)</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-40"><label class="form-check-label" for="formCheck-40">押し出し</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-44"><label class="form-check-label" for="formCheck-44">引き寄せ</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-40"><label class="form-check-label" for="formCheck-40">状態異常</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-41"><label class="form-check-label" for="formCheck-41">HS吸収</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-42"><label class="form-check-label" for="formCheck-42">HP吸収</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-38"><label class="form-check-label" for="formCheck-38">ノックバック</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-39"><label class="form-check-label" for="formCheck-39">ダウン</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-51"><label class="form-check-label" for="formCheck-51">バフ付与</label></div>
+                                </div>
+                                <div class="group"><span>攻撃力:&nbsp;</span><input class="form-control form-control-sm" type="number" style="width: 100px;"><span>%　~　</span><input class="form-control form-control-sm" type="number" style="width: 100px;"><span>%</span></div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">防御詳細</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-60"><label class="form-check-label" for="formCheck-60">通常</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-61"><label class="form-check-label" for="formCheck-61">吸収(回復)</label></div>
+                                </div>
+                                <div class="group"><span>攻撃力:&nbsp;</span><input class="form-control form-control-sm" type="number" style="width: 100px;"><span>%　~　</span><input class="form-control form-control-sm" type="number" style="width: 100px;"><span>%</span></div>
+                                <div class="group"><span>効果時間:&nbsp;</span><input class="form-control form-control-sm" type="number" style="width: 100px;"><span>秒　~　</span><input class="form-control form-control-sm" type="number" style="width: 100px;"><span>秒</span></div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">回復詳細</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-45"><label class="form-check-label" for="formCheck-45">通常</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-46"><label class="form-check-label" for="formCheck-46">継続</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-47"><label class="form-check-label" for="formCheck-47">状態異常回復</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-48"><label class="form-check-label" for="formCheck-48">ポータル</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-49"><label class="form-check-label" for="formCheck-49">全体回復</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-50"><label class="form-check-label" for="formCheck-50">接触付与</label></div>
+                                </div>
+                                <div class="group"><span class="title">回復量:&nbsp;</span><input class="form-control form-control-sm" type="number" style="width: 100px;"><span>%　~　</span><input class="form-control form-control-sm" type="number" style="width: 100px;"><span>%</span></div>
+                                <div class="group"><span class="title">継続回復時間:&nbsp;</span><input class="form-control form-control-sm" type="number" style="width: 100px;"><span>秒 (継続のときのみ表示)</span></div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">移動詳細</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-67"><label class="form-check-label" for="formCheck-67">背後</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-68"><label class="form-check-label" for="formCheck-68">リスポーン地点</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-69"><label class="form-check-label" for="formCheck-69">ポータルキー</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-70"><label class="form-check-label" for="formCheck-70">バフ付与</label></div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">罠詳細</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-71"><label class="form-check-label" for="formCheck-71">爆発</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-72"><label class="form-check-label" for="formCheck-72">押し出し</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-73"><label class="form-check-label" for="formCheck-73">モノリス</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-74"><label class="form-check-label" for="formCheck-74">引き寄せ</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-75"><label class="form-check-label" for="formCheck-75">設置毒</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-77"><label class="form-check-label" for="formCheck-77">スタン</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-76"><label class="form-check-label" for="formCheck-76">サイレント</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-78"><label class="form-check-label" for="formCheck-78">デバフ</label></div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">反射詳細</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-79"><label class="form-check-label" for="formCheck-79">正面</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-80"><label class="form-check-label" for="formCheck-80">周囲</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-81"><label class="form-check-label" for="formCheck-81">背後</label></div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">発動速度</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-33"><label class="form-check-label" for="formCheck-33">無</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-34"><label class="form-check-label" for="formCheck-34">短</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-35"><label class="form-check-label" for="formCheck-35">長</label></div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">カードステータス</span>
+                                <div class="group">
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-28" name="card-status"><label class="form-check-label" for="formCheck-28">通常</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-31" name="card-status"><label class="form-check-label" for="formCheck-31">攻撃</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-30" name="card-status"><label class="form-check-label" for="formCheck-30">防御</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-29" name="card-status"><label class="form-check-label" for="formCheck-29">体力</label></div>
+                                    <div class="form-check"><input class="form-check-input" type="radio" id="formCheck-32" name="card-status"><label class="form-check-label" for="formCheck-32">(下限)値で選択↓</label></div>
+                                </div>
+                                <div class="group">
+                                    <div class="subgroup">
+                                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-82"><label class="form-check-label" for="formCheck-82">攻撃</label></div><input class="form-control" type="number">
+                                    </div>
+                                    <div class="subgroup">
+                                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-84"><label class="form-check-label" for="formCheck-84">防御</label></div><input class="form-control" type="number">
+                                    </div>
+                                    <div class="subgroup">
+                                        <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-83"><label class="form-check-label" for="formCheck-83">体力</label></div><input class="form-control" type="number">
+                                    </div>
+                                </div>
+                            </div><!-- End: CheckboxContainer -->
+                            <!-- Start: CheckboxContainer -->
+                            <div class="checkbox-container"><span class="title">クールタイム</span>
+                                <div class="group"><input class="form-control" type="number" min="1" style="width: 100px;"><span>秒　~　</span><input class="form-control" type="number" min="1" style="width: 100px;"><span>秒</span></div>
+                            </div><!-- End: CheckboxContainer -->
+                        </form>
+                    </div>
+                    <div class="modal-footer"><button class="btn btn-light" type="button" data-bs-dismiss="modal">閉じる</button><button class="btn btn-primary" type="button">検索</button></div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Start: LoadingScreen -->
+    <div id="loadingScreen" class="hide">
+        <div class="text-center" id="loadingScreenContent"><img src="assets/img/logo.svg">
+            <div class="progress">
+                <div class="progress-bar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;"><span class="visually-hidden">0%</span></div>
+            </div><span class="status">Loading...</span>
+        </div><!-- Start: Debug -->
+        <div><button class="btn btn-secondary" type="button" onclick="new CpsDM().LoadingScreen.HideLoadingScreen();">Debug[HideLoadingScreen]</button><button class="btn btn-secondary" type="button" onclick="const DM = new CpsDM();">Debug[HideLoadingScreen]</button></div><!-- End: Debug -->
+    </div><!-- End: LoadingScreen -->
+    <header>
+        <!-- Start: NavBar -->
+        <nav class="navbar navbar-expand-md py-3 navbar-light">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="#"><img src="http://cpsdm-assets.local.mfmii.work/img/logo.svg" style="height: 75px;"></a>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link active" href="#" style="margin: 0 30px;">デッキ編成</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">ヒーローシュミレーション</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">ミニゲーム</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">情報修正</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">その他</a></li>
+                    </ul>
+                </div>
+                <div style="font-family: DFSoGeiStd-W7;"><span class="fs-2 d-block d-xxl-flex align-items-xxl-center">#コンパス DeckMakaer</span>
+                    <div><span>Created by mf_Mii</span><span class="float-end">応援コード: C-JesK</span></div>
+                </div><button data-bs-target="#navcol-1" data-bs-toggle="collapse" class="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            </div>
+        </nav><!-- End: NavBar -->
+    </header>
+    <main class="d-flex d-xxl-flex justify-content-start justify-content-xxl-start">
+        <div id="leftmenu">
+            <div id="leftmenuHeader">
+                <h4 class="d-inline">保存済みデッキ</h4><i class="fas fa-cog fs-3 text-black-50 float-end iconBtn" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="LeftDecksEditModeOnBtn__" title="デッキリストを編集"></i><i class="fas fa-times fs-3 text-black-50 float-end iconBtn hide" data-bs-toggle="tooltip" data-bss-tooltip="" data-bs-placement="bottom" id="LeftDecksEditModeOffBtn__" title="デッキリスト編集を終了"></i>
+            </div><!-- Start: line -->
+            <div class="x-line"></div><!-- End: line -->
+            <div id="deckList">
+                <!-- Start: デッキ一覧 -->
+                <ul class="list-group">
+                    <!-- Start: デッキ -->
+                    <li class="list-group-item deckList-item active">
+                        <!-- Start: 中身 -->
+                        <div class="deckList-itemContent"><img id="deckList-itemIcon" src="kokuriko_radius.png"><!-- Start: 名前入力 --><input type="text" class="deckList-nameInput"><!-- End: 名前入力 -->
+                            <!-- Start: 名前確定 --><button class="btn deckList-nameEnter" type="submit"><i class="fas fa-check"></i></button><!-- End: 名前確定 -->
+                            <!-- Start: 操作ボタン -->
+                            <div class="deckList-buttons"><i class="far fa-trash-alt float-end deckList-deleteBtn deckList-button"></i><i class="fas fa-pen float-end deckList-editBtn deckList-button"></i></div><!-- End: 操作ボタン --><span class="deckList-name">デッキ1</span>
+                        </div><!-- End: 中身 -->
+                        <!-- Start: 選択アニメーション -->
+                        <div class="deckList-activeAnimation"><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span><span>選択中</span></div><!-- End: 選択アニメーション -->
+                    </li><!-- End: デッキ -->
+                </ul><!-- End: デッキ一覧 -->
+            </div>
+            <div class="fs-5 text-center" id="addDeck" style="padding: 5px 0;"><span>追加</span><i class="fas fa-plus"></i></div>
+        </div>
+        <div id="mainWindow">
+            <div class="d-flex d-xxl-flex justify-content-between align-items-end" id="cardList_Header">
+                <h2>カード一覧</h2>
+                <div id="cardList_Header_SearchForm"><button class="btn btn-primary" id="cardList_Header_SF_filterBtn" type="button" data-bs-target="#modal-SearchFilter" data-bs-toggle="modal"><i class="fas fa-filter"></i>フィルター</button><input type="search" id="cardList_Header_SF_searchBox" placeholder="カードを検索(略称可)"><!-- Start: switch -->
+                    <div id="cardList_Header_SF_detailSwitch" class="form-check form-switch">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="CardList_ShowDetail_Switch" name="CardList_ShowDetail_Switch"><label class="form-check-label" for="CardList_ShowDetail_Switch">詳細表示</label></div>
+                    </div><!-- End: switch -->
+                </div>
+            </div><!-- Start: Line -->
+            <div class="x-line"></div><!-- End: Line -->
+            <div id="cardList_Main">
+                <!-- Start: RankContainer -->
+                <div class="cpsdm-cardList-rankContainer">
+                    <!-- Start: RankContainerHead -->
+                    <div class="cpsdm-cardList-rankContainer-head" type="button" data-bs-toggle="collapse" data-bs-target="#rankContainer_Content_F_Container" aria-expanded="false" aria-controls="rankContainer_Content_F_Container">
+                        <h4>Fランクより入手可能</h4><i class="fas fa-caret-down fs-3 iconBtn"></i>
+                    </div><!-- End: RankContainerHead -->
+                    <div id="rankContainer_Content_F_Container" class="collapse collapsed show">
+                        <div id="rankContainer_Content_F" class="cpsdm-cardList-rankContainer-content">
+                            <ul class="list-group cpsdm-cardList-container-list">
+                                <li class="list-group-item cpsdm-cardList-container-list-item" style="background-image: url('http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp');">
+                                    <div class="cpsdm-cardList-cardDetail" data-cpsdm-cardid="001"><span class="cpsdm-cardList-cardDetail-name">祭りのお供！ 手持ち花火</span>
+                                        <div class="cpsdm-cardList-cardDetail-status"><span class="cpsdm-cardList-cardDetail-status-atk">&nbsp; 55</span><span class="cpsdm-cardList-cardDetail-status-def">&nbsp; 18</span><span class="cpsdm-cardList-cardDetail-status-phy">363</span></div>
+                                        <div class="cpsdm-cardList-cardDetail-info"><span>CT:&nbsp;</span><span>18秒</span><!-- Start: Padding --><span class="pad"></span><!-- End: Padding --><span>発動:&nbsp;</span><span>無</span></div>
+                                        <div class="cpsdm-cardList-cardDetail-buttonBox"><button class="btn btn-primary cpsdm-cardList-cardDetail-button" type="button"><span>詳細</span><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-1 iconBtn">
+                                                    <g>
+                                                        <path d="M0,0h24v24H0V0z" fill="none"></path>
+                                                        <path d="M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"></path>
+                                                    </g>
+                                                </svg></button><button class="btn btn-primary cpsdm-cardList-cardDetail-button" type="button"><span>使用</span><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-1 iconBtn">
+                                                    <path d="M0 0h24v24H0z" fill="none"></path>
+                                                    <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"></path>
+                                                </svg></button></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- End: RankContainer -->
+            </div>
+            <div id="cardInfo"><span class="title">【ダンまち】眷属の物語（ファミリア・ミィス）</span>
+                <div class="card-info"><img class="card-img" src="http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp"><!-- Start: CardData -->
+                    <div class="card-data">
+                        <div class="desc"><span class="head">効果</span><span class="content">効果の説明 効果の説明 効果の説明 効果の説明 効果の説明 効果の説明 効果の説明</span></div>
+                        <div><span class="head">CT</span><span class="content">29秒</span></div>
+                        <div><span class="head">発動</span><span class="content">29秒</span></div>
+                        <div><span class="head">射程</span><span class="content">前1.5ﾏｽ 横1.5ﾏｽ</span></div>
+                        <div><span class="head">倍率</span><span class="content">1000%</span></div>
+                        <ul class="statusBox">
+                            <li class="cardStatus-status" data-cpsdm-cardstatus="atk"><span>攻撃</span>
+                                <div class="cardStatus-BarBox"><span class="cardStatus-BarBox-text">123</span>
+                                    <div class="cardStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                            <li class="cardStatus-status" data-cpsdm-cardstatus="def"><span>防御</span>
+                                <div class="cardStatus-BarBox"><span class="cardStatus-BarBox-text">123</span>
+                                    <div class="cardStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                            <li class="cardStatus-status" data-cpsdm-cardstatus="phy"><span>体力</span>
+                                <div class="cardStatus-BarBox"><span class="cardStatus-BarBox-text">1234</span>
+                                    <div class="cardStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div><!-- End: CardData -->
+                </div>
+            </div>
+        </div>
+        <div id="rightwindow">
+            <div id="deckBox">
+                <div id="deckBox-Title">
+                    <h2>DECK</h2>
+                    <div id="deckBox-LevelLock">
+                        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="DeckBox-TotalStatus-HeroCalcSwitch-1" name=""><label class="form-check-label" for="DeckBox-TotalStatus-HeroCalcSwitch-1">カードレベル固定</label></div><input type="number" list="deckbox-levelock-inputlist" min="1" max="60" />
+<datalist id="deckbox-levelock-inputlist">
+    <option value="1"></option>
+    <option value="20"></option>
+    <option value="30"></option>
+    <option value="40"></option>
+    <option value="50"></option>
+    <option value="60"></option>
+</datalist>
+                    </div>
+                </div>
+                <div id="deckBox-Cards">
+                    <ul>
+                        <li class="deckBox-card"><img src="http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <!-- Start: LevelInput -->
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div><!-- End: LevelInput -->
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-card"><img src="http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <!-- Start: LevelInput -->
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div><!-- End: LevelInput -->
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-card"><img src="http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <!-- Start: LevelInput -->
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div><!-- End: LevelInput -->
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-card"><img src="http://cpsdm-assets.local.mfmii.work/img/card/normal/1.webp" width="100%">
+                            <div class="deckBox-card-detail">
+                                <!-- Start: LevelInput -->
+                                <div class="deckBox-card-detail-level"><span>Lv.&nbsp;</span><input type="number" class="deckBox-card-detail-level-input" min="1" max="60"></div><!-- End: LevelInput -->
+                                <div class="deckBox-card-detail-statusBox"><span class="deckBox-card-detail-statusBox-atk">999</span><span class="deckBox-card-detail-statusBox-def">999</span><span class="deckBox-card-detail-statusBox-phy">9999</span></div>
+                                <div class="deckBox-card-detail-info"><span>発: 無</span><span>CT:999</span></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="deckBox-TotalStatus">
+                    <h5>デッキ総合戦力</h5>
+                    <ul>
+                        <li class="deckBox-TotalStatus-status" data-cpsdm-totalstatus="atk"><span>攻撃</span>
+                            <div class="deckBox-TotalStatus-status-barBox">
+                                <div class="deckBox-TotalStatus-status-barBox-text"><span class="deckBox-TotalStatus-status-barBox-text-normal">99999</span></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-plus"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-minus"></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-TotalStatus-status" data-cpsdm-totalstatus="def"><span>防御</span>
+                            <div class="deckBox-TotalStatus-status-barBox">
+                                <div class="deckBox-TotalStatus-status-barBox-text"><span class="deckBox-TotalStatus-status-barBox-text-normal">99999</span></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-plus"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-minus"></div>
+                            </div>
+                        </li>
+                        <li class="deckBox-TotalStatus-status" data-cpsdm-totalstatus="phy"><span>体力</span>
+                            <div class="deckBox-TotalStatus-status-barBox">
+                                <div class="deckBox-TotalStatus-status-barBox-text"><span class="deckBox-TotalStatus-status-barBox-text-normal">99999</span></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-plus"></div>
+                                <div class="deckBox-TotalStatus-status-barBox-val-minus"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div id="deckBox-TotalStatus-HeroCalc">
+                        <div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="DeckBox-TotalStatus-HeroCalcSwitch" name=""><label class="form-check-label" for="DeckBox-TotalStatus-HeroCalcSwitch">ヒーロー倍率補正計算</label></div>
+                    </div>
+                </div>
+            </div>
+            <div id="heroInfo">
+                <div id="heroInfo-Title">
+                    <h2>HERO</h2>
+                </div>
+                <div id="heroInfo-content">
+                    <div id="heroInfo-cont-summary"><button class="hero-selectable-btn" type="button" data-bs-target="#modal-HeroSelect" data-bs-toggle="modal"><img><span class="heroChange">▲タップして変更</span></button><span class="heroNick">メグメグ</span></div>
+                    <div id="heroInfo-cont-detail">
+                        <ul id="heroInfo-cont-statusBox">
+                            <li class="heroStatus-status" data-cpsdm-herostatus="atk"><span>攻撃</span>
+                                <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                    <div class="heroStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                            <li class="heroStatus-status" data-cpsdm-herostatus="def"><span>防御</span>
+                                <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                    <div class="heroStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                            <li class="heroStatus-status" data-cpsdm-herostatus="phy"><span>体力</span>
+                                <div class="heroStatus-BarBox"><span class="heroStatus-BarBox-text">×1.0</span>
+                                    <div class="heroStatus-BarBox-val"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div id="heroInfo-cont-detailStatus">
+                            <div class="heroDetailStatus" data-cpsdm-herostatus="len"><span>射程|</span><span>4ﾏｽ</span></div>
+                            <div class="heroDetailStatus" data-cpsdm-herostatus="spd"><span>速度|</span><span>4ﾏｽ/s</span></div>
+                        </div>
+                        <div id="heroInfo-cont-buttons">
+                            <ul class="list-unstyled" id="heroInfo-Medals" data-bs-toggle="modal" data-bs-target="#modal-Medal">
+                                <li>
+                                    <div><img class="medal_base" src="assets/img/MedalBase01.png"><img class="medal_icon" src="assets/img/MedalIcon001.png"></div>
+                                </li>
+                                <li>
+                                    <div><img class="medal_base" src="assets/img/MedalBase01.png"><img class="medal_icon" src="assets/img/MedalIcon001.png"></div>
+                                </li>
+                                <li>
+                                    <div><img class="medal_base" src="assets/img/MedalBase01.png"><img class="medal_icon" src="assets/img/MedalIcon001.png"></div>
+                                </li>
+                            </ul>
+                            <div id="heroInfo-MedalEnableBtnContainer" btn-stat-enable="0"><span class="btn-label">メダル適応</span>
+                                <div><span class="status-text">OFF</span><!-- Start: CPS-Button --><button class="cps-btn ok" type="button">変更</button><!-- End: CPS-Button -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="heroInfo-more">
+                    <!-- Start: Buttons -->
+                    <div class="page-change-buttons"><button class="selected" type="button"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-4">
+                                <g>
+                                    <path d="M0,0h24v24H0V0z" fill="none"></path>
+                                    <path d="M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"></path>
+                                </g>
+                            </svg></button><button type="button"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-4">
+                                <path d="M0 0h24v24H0V0z" fill="none"></path>
+                                <path d="M3 18h12v-2H3v2zM3 6v2h18V6H3zm0 7h18v-2H3v2z"></path>
+                            </svg></button><button type="button"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-4">
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M19.99 4c0-1.1-.89-2-1.99-2h-8L4 8v12c0 1.1.9 2 2 2h12.01c1.1 0 1.99-.9 1.99-2l-.01-16zM9 19H7v-2h2v2zm8 0h-2v-2h2v2zm-8-4H7v-4h2v4zm4 4h-2v-4h2v4zm0-6h-2v-2h2v2zm4 2h-2v-4h2v4z"></path>
+                            </svg></button></div><!-- End: Buttons -->
+                    <!-- Start: PageContainer -->
+                    <div class="page-container" page-index="0">
+                        <!-- Start: HeroInfo -->
+                        <div class="page hero-info">
+                            <!-- Start: Info -->
+                            <div class="infoBox"><span>ILLUST: ぽあろ</span><span>CV: 天野 心愛&amp;中尾 隆聖</span><span>Motion: 217</span><span>Music:&nbsp;<a class="herosong-link" href="#">バイオレンストリガー</a>&nbsp;(八王子P)</span><button class="btn btn-secondary" id="heroInfo-openModal" type="button" data-bs-target="#modal-Hero" data-bs-toggle="modal">詳細<svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor">
+                                        <g>
+                                            <path d="M0,0h24v24H0V0z" fill="none"></path>
+                                            <path d="M11,7h2v2h-2V7z M11,11h2v6h-2V11z M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2z M12,20 c-4.41,0-8-3.59-8-8s3.59-8,8-8s8,3.59,8,8S16.41,20,12,20z"></path>
+                                        </g>
+                                    </svg></button></div><!-- End: Info -->
+                            <!-- Start: StatusSelector -->
+                            <ul class="status-selector">
+                                <li class="selected">
+                                    <div class="status-selector-item"><span class="title">通常</span></div>
+                                </li>
+                                <li>
+                                    <div class="status-selector-item"><span class="title">HS</span></div>
+                                </li>
+                            </ul><!-- End: StatusSelector -->
+                        </div><!-- End: HeroInfo -->
+                        <!-- Start: HeroFeatures(HA,HS,Ab) -->
+                        <div class="page hero-features">
+                            <div class="hero_feature">
+                                <div class="title"><span class="head">ﾋｰﾛｰｽｷﾙ</span><span class="content">がとりんMKⅡ せっち</span></div>
+                                <p class="description"><span class="main">設置型ガトリングで敵を自動攻撃(最大2機まで)</span><br>タメ時間: 約9秒&nbsp; |&nbsp; 無敵時間: 約2.9秒(初回のみ約7.0秒)<br>射程: 無限 | 攻撃倍率: 約×0.88&nbsp; |&nbsp; 設置時間: 36秒</p>
+                            </div>
+                            <div class="hero_feature">
+                                <div class="title"><span class="head">ｱｸｼｮﾝ</span><span class="content">回転式機関銃攻撃／ばっちーのショードク</span></div>
+                                <p class="description">設置型ガトリングで敵を自動攻撃(最大2機まで)</p>
+                            </div>
+                            <div class="hero_feature">
+                                <div class="title"><span class="head">ｱﾋﾞﾘﾃｨ</span><span class="content">デンジャラス ハイテンション</span></div>
+                                <p class="description">敵にダメージを与えるたびにHSゲージ回復<br>(1ﾀﾞﾒ=1/80, 2ﾀﾞﾒ以上=1/40)</p>
+                            </div>
+                        </div><!-- End: HeroFeatures(HA,HS,Ab) -->
+                        <!-- Start: CardTimes-Page -->
+                        <div class="page card-data">
+                            <!-- Start: CardTimes -->
+                            <div class="card-times">
+                                <!-- Start: Title --><span class="title">カード発動時間</span><!-- End: Title -->
+                                <!-- Start: Times1 -->
+                                <div class="time1_container">
+                                    <div class="time1_item"><span class="label">無</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                    <div class="time1_item"><span class="label">短</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                    <div class="time1_item"><span class="label">長</span>
+                                        <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                    </div>
+                                </div><!-- End: Times1 -->
+                                <!-- Start: Times2 -->
+                                <div class="time2_container">
+                                    <!-- Start: Group -->
+                                    <div class="time2_group">
+                                        <!-- Start: Item -->
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div><!-- End: Item -->
+                                        <!-- Start: Item -->
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div><!-- End: Item -->
+                                    </div><!-- End: Group -->
+                                    <!-- Start: Group -->
+                                    <div class="time2_group">
+                                        <!-- Start: Item -->
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div><!-- End: Item -->
+                                        <!-- Start: Item -->
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div><!-- End: Item -->
+                                    </div><!-- End: Group -->
+                                    <!-- Start: Group -->
+                                    <div class="time2_group">
+                                        <!-- Start: Item -->
+                                        <div class="time2_item"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg"><img class="label_image" src="http://cpsdm-assets.local.mfmii.work/img/icons/card_kin.jpg">
+                                            <div class="value_group"><span class="before">発動: <strong>0.00</strong></span><span class="after">硬直: <strong>0.00</strong></span></div>
+                                        </div><!-- End: Item -->
+                                    </div><!-- End: Group -->
+                                </div><!-- End: Times2 -->
+                            </div><!-- End: CardTimes -->
+                        </div><!-- End: CardTimes-Page -->
+                    </div><!-- End: PageContainer -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/cpsdm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" type="module"></script>
+    <script src="assets/js/page.js"></script>
+    <script src="assets/js/utils.js"></script>
+</body>
+
+</html>

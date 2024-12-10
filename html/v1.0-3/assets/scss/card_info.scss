@@ -1,0 +1,135 @@
+#mainWindow {
+    position: relative;
+    
+    #cardInfo {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 500px;
+        padding: 10px;
+        background: #000d;
+        color: #fff;
+        > * {
+            display: block;
+        }
+        .title {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .card-info {
+            display: flex;
+            flex-direction: row;
+            img.card-img {
+                width: 30%;
+            }
+            div.card-data {
+                width: calc(70% - 5px);
+                margin-left: 5px;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-content: start;
+                > * {
+                    width: 50%;
+                    font-size: 0;
+                    .head {
+                        width: 60px;
+                        background: #666;
+                        line-height: 16px;
+                        font-size: 14px;
+                        clip-path: polygon(0 0, 90% 0%, 100% 50%, 90% 100%, 0 100%);
+                        display: inline-block;
+                        margin-right: 8px;
+                        color: #fff;
+                        text-align: center;
+                        vertical-align: top;
+                    }
+                
+                    .content {
+                        color: #fff;
+                        font-size: 14px;
+                        display: inline-block;
+                        width: calc(100% - 68px);
+                        text-wrap: wrap;
+                    }
+                }
+                > .desc {
+                    width: 100%;
+                }
+                > .statusBox {
+                    list-style: none;
+                    margin: 10px;
+                    padding: 0;
+                    width: 100%;
+                
+                    .cardStatus-status {
+                        color: #fff;
+                        margin: 7px 0;
+                
+                        >span {
+                            font-weight: bold;
+                            line-height: 20px;
+                            vertical-align: top;
+                            font-size: 16px;
+                            margin-right: 10px;
+                
+                            &::before {
+                                content: " ";
+                                display: inline-block;
+                                width: var(--cpsdm-cardDetail-stat-size);
+                                height: var(--cpsdm-cardDetail-stat-size);
+                                background-size: contain;
+                                background-position: center;
+                                width: 20px;
+                                height: 20px;
+                                vertical-align: middle;
+                            }
+                        }
+                
+                        &[data-cpsdm-cardstatus="atk"]>span::before {
+                            background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_attack_w.png);
+                        }
+                
+                        &[data-cpsdm-cardstatus="def"]>span::before {
+                            background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_defence_w.png);
+                        }
+                
+                        &[data-cpsdm-cardstatus="phy"]>span::before {
+                            background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_physical_w.png);
+                        }
+                
+                        .cardStatus-BarBox {
+                            display: inline-block;
+                            border: 2px solid #999;
+                            width: calc(100% - 80px);
+                            height: 20px;
+                            background: #444;
+                            font-size: 0;
+                            text-align: left;
+                            position: relative;
+                
+                            .cardStatus-BarBox-text {
+                                position: absolute;
+                                transform: translate(-20px, -4px);
+                                display: inline-block;
+                                font-size: 14px;
+                                color: #fff;
+                                z-index: 110;
+                                right: 0;
+                            }
+                
+                            .cardStatus-BarBox-val {
+                                display: inline-block;
+                                height: 100%;
+                                position: relative;
+                                width: 50%;
+                                background-color: #ce5;
+                                z-index: 100;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

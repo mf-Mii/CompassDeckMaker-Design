@@ -1,0 +1,9 @@
+div.cps-btn {
+  width: 52px;
+  outline: none;
+  border: 3px solid #9b530a;
+  background: var(--cps-theme);
+  color: #fff;
+  box-shadow: 0 0 2px rgb(0, 8, 54);
+}
+

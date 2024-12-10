@@ -1,0 +1,124 @@
+#mainWindow {
+  position: relative;
+}
+#mainWindow #cardInfo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 500px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8666666667);
+  color: #fff;
+}
+#mainWindow #cardInfo > * {
+  display: block;
+}
+#mainWindow #cardInfo .title {
+  font-size: 28px;
+  font-weight: bold;
+}
+#mainWindow #cardInfo .card-info {
+  display: flex;
+  flex-direction: row;
+}
+#mainWindow #cardInfo .card-info img.card-img {
+  width: 30%;
+}
+#mainWindow #cardInfo .card-info div.card-data {
+  width: calc(70% - 5px);
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: start;
+}
+#mainWindow #cardInfo .card-info div.card-data > * {
+  width: 50%;
+  font-size: 0;
+}
+#mainWindow #cardInfo .card-info div.card-data > * .head {
+  width: 60px;
+  background: #666;
+  line-height: 16px;
+  font-size: 14px;
+  clip-path: polygon(0 0, 90% 0%, 100% 50%, 90% 100%, 0 100%);
+  display: inline-block;
+  margin-right: 8px;
+  color: #fff;
+  text-align: center;
+  vertical-align: top;
+}
+#mainWindow #cardInfo .card-info div.card-data > * .content {
+  color: #fff;
+  font-size: 14px;
+  display: inline-block;
+  width: calc(100% - 68px);
+  text-wrap: wrap;
+}
+#mainWindow #cardInfo .card-info div.card-data > .desc {
+  width: 100%;
+}
+#mainWindow #cardInfo .card-info div.card-data > .statusBox {
+  list-style: none;
+  margin: 10px;
+  padding: 0;
+  width: 100%;
+}
+#mainWindow #cardInfo .card-info div.card-data > .statusBox .cardStatus-status {
+  color: #fff;
+  margin: 7px 0;
+}
+#mainWindow #cardInfo .card-info div.card-data > .statusBox .cardStatus-status > span {
+  font-weight: bold;
+  line-height: 20px;
+  vertical-align: top;
+  font-size: 16px;
+  margin-right: 10px;
+}
+#mainWindow #cardInfo .card-info div.card-data > .statusBox .cardStatus-status > span::before {
+  content: " ";
+  display: inline-block;
+  width: var(--cpsdm-cardDetail-stat-size);
+  height: var(--cpsdm-cardDetail-stat-size);
+  background-size: contain;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+#mainWindow #cardInfo .card-info div.card-data > .statusBox .cardStatus-status[data-cpsdm-cardstatus=atk] > span::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_attack_w.png);
+}
+#mainWindow #cardInfo .card-info div.card-data > .statusBox .cardStatus-status[data-cpsdm-cardstatus=def] > span::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_defence_w.png);
+}
+#mainWindow #cardInfo .card-info div.card-data > .statusBox .cardStatus-status[data-cpsdm-cardstatus=phy] > span::before {
+  background-image: url(http://cpsdm-assets.local.mfmii.work/img/icons/stat_physical_w.png);
+}
+#mainWindow #cardInfo .card-info div.card-data > .statusBox .cardStatus-status .cardStatus-BarBox {
+  display: inline-block;
+  border: 2px solid #999;
+  width: calc(100% - 80px);
+  height: 20px;
+  background: #444;
+  font-size: 0;
+  text-align: left;
+  position: relative;
+}
+#mainWindow #cardInfo .card-info div.card-data > .statusBox .cardStatus-status .cardStatus-BarBox .cardStatus-BarBox-text {
+  position: absolute;
+  transform: translate(-20px, -4px);
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  z-index: 110;
+  right: 0;
+}
+#mainWindow #cardInfo .card-info div.card-data > .statusBox .cardStatus-status .cardStatus-BarBox .cardStatus-BarBox-val {
+  display: inline-block;
+  height: 100%;
+  position: relative;
+  width: 50%;
+  background-color: #ce5;
+  z-index: 100;
+}
